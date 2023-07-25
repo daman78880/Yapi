@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+<data>
+    <variable
+        name="mViewModel"
+        type="com.yapi.views.search.SearchViewModel" />
+
+    <variable
+        name="mView"
+        type="android.view.View" />
+</data>
+
+    <LinearLayout
+        android:id="@+id/layoutSearch"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:background="@color/transparent"
+        android:layout_height="match_parent">
+    <ImageView
+        android:id="@+id/ivOutsideCloseSearch"
+        android:layout_width="@dimen/outside_cross_width"
+        android:layout_height="@dimen/outside_cross_height"
+        android:layout_marginTop="@dimen/_2sdp"
+        android:src="@drawable/ic_cross_icon"
+        android:layout_gravity="end"
+        app:tint="@color/white"
+        android:visibility="@{mViewModel.cancelshowField?mView.GONE:mView.VISIBLE}"
+        android:onClick="@{mViewModel::onClick}"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layoutCreateSearch"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:onClick="@{mViewModel::onClick}"
+        android:paddingStart="@dimen/startMainMargin"
+        android:paddingTop="@dimen/startMainMargin"
+        android:backgroundTint="@color/white"
+        android:paddingEnd="@dimen/startMainMargin"
+        android:paddingBottom="@dimen/startMainMargin"
+        tools:context=".views.create_group.CreateGroupFragment">
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedScrollViewSearch"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:onClick="@{mViewModel::onClick}"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:context=".views.search.SearchFragment">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layoutSearchOptionsSearch"
+            android:onClick="@{mViewModel::onClick}"
+
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@color/transparent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imgCancelTabSearch"
+                android:layout_width="@dimen/iconSize"
+                android:layout_height="@dimen/iconSize"
+                android:src="@drawable/ic_cross_icon"
+                android:tint="@color/red"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/imgCancelTabSearch"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="  parent">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/imgCancelSearch"
+                    android:layout_width="@dimen/iconSize"
+                    android:layout_height="@dimen/iconSize"
+                    android:src="@drawable/ic_cross_icon"
+                    android:visibility="@{mViewModel.cancelshowField?mView.VISIBLE:mView.GONE}"
+
+                    android:onClick="@{mViewModel::onClick}"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/etSearch"
+                    android:imeOptions="actionSearch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/topNormalMargin"
+                    android:textColorHint="@color/darkLiteGrey"
+                    android:background="@drawable/round_lite_gray"
+                    android:drawableStart="@drawable/search"
+                    android:drawablePadding="@dimen/drawableEtPadding"
+                    android:drawableTint="@color/drawableLiteGreyColor"
+                    android:fontFamily="@font/larsseit_regular"
+                    android:hint="@string/search_here"
+                    android:inputType="text"
+                    android:maxLength="128"
+                    android:paddingStart="@dimen/etHorizontalPadding"
+                    android:paddingTop="@dimen/etVerticalPadding"
+                    android:paddingEnd="@dimen/etHorizontalPadding"
+                    android:paddingBottom="@dimen/etVerticalPadding"
+                    android:textColor="@color/darkGrey"
+                    android:textSize="@dimen/normalTextSize"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/imgCancelSearch" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txtTempRecentSearch"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/topMargin"
+                    android:text="@string/recent_searches"
+                    android:fontFamily="@font/larsseit_regular"
+                    android:textColor="@color/darkLiteGrey"
+                    android:textSize="@dimen/normalTextSize"
+                    app:layout_constraintEnd_toStartOf="@+id/txtTempClearSearch"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/etSearch" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txtTempClearSearch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/clear"
+                    android:textAllCaps="true"
+                    android:fontFamily="@font/larsseit_bold"
+                    android:textColor="@color/medium_grey_color"
+                    android:textSize="@dimen/smallTextSize"
+                    app:layout_constraintHorizontal_chainStyle="packed"
+                    app:layout_constraintEnd_toStartOf="@+id/txtTempViewHistorySearch"
+                    app:layout_constraintStart_toEndOf="@id/txtTempRecentSearch"
+                    app:layout_constraintTop_toTopOf="@id/txtTempRecentSearch"
+                    app:layout_constraintBottom_toBottomOf="@id/txtTempRecentSearch"
+                    />
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txtTempViewHistorySearch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/view_history"
+                    android:textAllCaps="true"
+                    android:fontFamily="@font/larsseit_bold"
+                    android:textColor="@color/blueColor"
+                    android:layout_marginStart="@dimen/topNormalMargin"
+                    android:textSize="@dimen/smallTextSize"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/txtTempClearSearch"
+                    app:layout_constraintTop_toTopOf="@id/txtTempRecentSearch"
+                    app:layout_constraintBottom_toBottomOf="@id/txtTempRecentSearch" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvSearch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    tools:itemCount="3"
+                    tools:listitem="@layout/rv_search_layout"
+                    android:layout_marginTop="@dimen/topFiveMargin"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtTempRecentSearch" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+
+</layout>

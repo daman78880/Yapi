@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <View
+        android:id="@+id/selectedLineRvCustomersList"
+        android:layout_width="@dimen/_2sdp"
+        android:layout_height="0dp"
+        android:background="@color/blueColor"
+        android:visibility="invisible"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintsLayoutStart"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/_10ssp"
+        android:paddingBottom="@dimen/_10ssp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/selectedLineRvCustomersList"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        >
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/imgProfilePicRvCustomerList"
+        android:layout_width="@dimen/_25sdp"
+        android:layout_height="@dimen/_25sdp"
+        android:scaleType="centerCrop"
+        android:layout_gravity="end"
+        android:src="@drawable/demo_photo"
+        android:layout_alignParentEnd="true"
+        app:riv_corner_radius="8dp"
+        app:riv_mutate_background="true"
+        android:layout_marginStart="@dimen/_24sdp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/onlineStatusRvCustomerList"
+        android:layout_width="@dimen/_8sdp"
+        android:layout_height="@dimen/_8sdp"
+        android:scaleType="centerCrop"
+        android:layout_gravity="end"
+        android:background="@color/teal_700"
+        android:layout_alignParentEnd="true"
+        app:riv_corner_radius="8dp"
+        app:riv_oval="true"
+        app:riv_border_width="@dimen/_1sdp"
+        app:riv_border_color="@color/white"
+        app:riv_mutate_background="true"
+        app:layout_constraintStart_toStartOf="@+id/imgProfilePicRvCustomerList"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtUserNameRvCustomerList"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="User one"
+        android:fontFamily="@font/larsseit_medium"
+        android:textSize="@dimen/normalTextSize"
+        android:paddingStart="@dimen/startPaddingNormal"
+        android:paddingEnd="@dimen/startPaddingNormal"
+        android:singleLine="true"
+        android:textColor="@color/medium_grey_color"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imgProfilePicRvCustomerList"
+        app:layout_constraintEnd_toStartOf="@+id/txtCountRvCustomerList"
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtCountRvCustomerList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/round_circle_blue"
+        android:clipToOutline="true"
+        android:fontFamily="@font/larsseit_bold"
+        android:gravity="center"
+        android:text="84"
+        android:textColor="@color/white"
+        android:textSize="@dimen/unSeenCountTextSize"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layoutAddNewTeamsMenuAdapter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/_10ssp"
+        android:paddingBottom="@dimen/_10ssp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/selectedLineRvCustomersList"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+       app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/imgAddNewTeamsMenu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/_26sdp"
+            android:fontFamily="@font/larsseit_bold"
+            android:gravity="start"
+            android:text="@string/add_teammates"
+            android:textAllCaps="true"
+            android:textColor="@color/blueColor"
+            android:textSize="@dimen/smallTextSize"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/txtAddNewTeamsMenu"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/txtAddNewTeamsMenu"
+            android:layout_width="@dimen/iconSize"
+            android:layout_height="@dimen/iconSize"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/topFiveMargin"
+            android:src="@drawable/ic_baseline_add_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imgAddNewTeamsMenu"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

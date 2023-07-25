@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/rvNumberPaginationGroupMembers"
+            >
+        <androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingStart="@dimen/popSideMargin"
+    android:paddingEnd="@dimen/popSideMargin"
+    tools:context=".views.group_info.add_group_members.AddGroupMembers">
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnDoneGroupMembers"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_drawable_blue"
+        android:text="@string/edit_group"
+        android:backgroundTint="@color/darkBlueBtn"
+        android:layout_marginTop="@dimen/topNormalMargin"
+        android:padding="@dimen/etVerticalPadding"
+        android:textColor="@color/white"
+        android:fontFamily="@font/larsseit_bold"
+        android:textSize="@dimen/normalTextSize"
+        android:textAllCaps="true"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtTempGroupImageGroupMembers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/topTwentyFiveMargin"
+        android:fontFamily="@font/larsseit_medium"
+        android:text="@string/add_member_text"
+        android:textColor="@color/darkGrey"
+        android:textSize="@dimen/smallTextSize"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnDoneGroupMembers" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/etGroupNameGroupMembers"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/topFiveMargin"
+        android:background="@drawable/et_drawable"
+        android:drawableStart="@drawable/search"
+        android:drawablePadding="@dimen/_15sdp"
+        android:drawableTint="@color/drawableLiteGreyColor"
+        android:fontFamily="@font/larsseit_regular"
+        android:hint="@string/search_member_by_name"
+        android:inputType="textEmailAddress"
+        android:maxLength="128"
+        android:paddingStart="@dimen/_22sdp"
+        android:paddingTop="@dimen/etVerticalPadding"
+        android:paddingEnd="@dimen/etHorizontalPadding"
+        android:paddingBottom="@dimen/etVerticalPadding"
+        android:textColor="@color/darkGrey"
+        android:textColorHint="@color/darkLiteGrey"
+        android:textSize="@dimen/normalTextSize"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtTempGroupImageGroupMembers" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtTempOrGroupMembers"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_2sdp"
+        android:fontFamily="@font/larsseit_regular"
+        android:gravity="center"
+        android:text="or"
+        android:textColor="@color/darkLiteGrey"
+        android:textSize="@dimen/normalTextSize"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etGroupNameGroupMembers" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layoutSendEmailInvitationGroupMembers"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_2sdp"
+        android:backgroundTint="@color/liteBlueForDrawable"
+        android:background="@drawable/round_lite_gray"
+        android:paddingStart="@dimen/etHorizontalPadding"
+        android:paddingTop="@dimen/etVerticalPadding"
+        android:paddingEnd="@dimen/etHorizontalPadding"
+        android:paddingBottom="@dimen/etVerticalPadding"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtTempOrGroupMembers">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imgTempMailGroupMembers"
+            android:layout_width="@dimen/iconSize"
+            android:layout_height="@dimen/iconSize"
+            android:layout_marginStart="@dimen/topMargin"
+            android:src="@drawable/ic_baseline_mail_outline_24"
+            android:tint="@color/blueColor"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/topFiveMargin"
+            android:fontFamily="@font/larsseit_regular"
+            android:text="@string/send_email_invitations"
+            android:textColor="@color/blueColor"
+            android:textSize="@dimen/normalTextSize"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/imgTempMailGroupMembers"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:id="@+id/layoutFilterOptionGroupMembers"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_2sdp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layoutSendEmailInvitationGroupMembers">
+
+        <LinearLayout
+            android:id="@+id/layoutBusinessUnitGroupMembers"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginEnd="@dimen/_2sdp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:paddingStart="@dimen/topFiveMargin"
+            android:paddingTop="@dimen/_9sdp"
+            android:paddingEnd="@dimen/topFiveMargin"
+            android:paddingBottom="@dimen/_9sdp">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtTempBusinessUnitsGroupMembers"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/larsseit_medium"
+                android:textColor="@color/darkLiteGrey"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/business_nunits"
+                android:textSize="@dimen/normalSmallTextSize" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imgTempArrowBusinessUnitsGroupMembers"
+                android:layout_width="@dimen/iconSize"
+                android:layout_height="@dimen/iconSize"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_baseline_keyboard_arrow_down_24" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutRegionGroupMembers"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginEnd="@dimen/_2sdp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:paddingStart="@dimen/topFiveMargin"
+            android:paddingTop="@dimen/_9sdp"
+            android:paddingEnd="@dimen/topFiveMargin"
+            android:paddingBottom="@dimen/_9sdp">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtTempRegionGroupMembers"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/larsseit_medium"
+                android:textColor="@color/darkGrey"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/los_nangels"
+                android:textSize="@dimen/normalSmallTextSize" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="@dimen/iconSize"
+                android:layout_height="@dimen/iconSize"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_baseline_keyboard_arrow_down_24" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutJobTypeGroupMembers"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:paddingStart="@dimen/topFiveMargin"
+            android:paddingTop="@dimen/_9sdp"
+            android:paddingEnd="@dimen/topFiveMargin"
+            android:paddingBottom="@dimen/_9sdp">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtTempJobTypeGroupMembers"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/larsseit_medium"
+                android:textColor="@color/darkLiteGrey"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/job_ntype"
+                android:textSize="@dimen/normalSmallTextSize"/>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="@dimen/iconSize"
+                android:layout_height="@dimen/iconSize"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_baseline_keyboard_arrow_down_24" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvGroupMembers"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        tools:itemCount="5"
+        tools:listitem="@layout/rv_member_list_group"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintTop_toBottomOf="@id/layoutFilterOptionGroupMembers"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvNumberPaginationGroupMembers"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            tools:itemCount="5"
+            android:foregroundGravity="center"
+            android:padding="@dimen/topFiveMargin"
+            tools:listitem="@layout/number_pagination"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

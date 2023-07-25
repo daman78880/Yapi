@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="startMainPlusMargin">@dimen/_20sdp</dimen>
+    <dimen name="topMainMargin">@dimen/_22sdp</dimen>
+    <dimen name="bottomMarggin">@dimen/_30sdp</dimen>
+    <dimen name="topMargin">@dimen/_10sdp</dimen>
+    <dimen name="topFifteenMargin">@dimen/_15sdp</dimen>
+    <dimen name="topNormalMargin">@dimen/_12sdp</dimen>
+
+
+    <dimen name="smallIconSize">@dimen/_10sdp</dimen>
+    <dimen name="iconSize">@dimen/_13sdp</dimen>
+    <dimen name="iconSmallBigSize">@dimen/_15sdp</dimen>
+    <dimen name="bigIconSize">@dimen/_22sdp</dimen>
+    <dimen name="fortyFourIconSize">@dimen/_33sdp</dimen>
+    <dimen name="extraIconSize">@dimen/_15sdp</dimen>
+
+    <dimen name="extraNormalTextSize">@dimen/_13ssp</dimen>
+    <dimen name="normalTextSize">@dimen/_10ssp</dimen>
+    <dimen name="normalSmallTextSize">@dimen/_9ssp</dimen>
+    <dimen name="smallTextSize">@dimen/_8ssp</dimen>
+    <dimen name="IconTextSize">@dimen/_20sdp</dimen>
+    <dimen name="titleTextSize">@dimen/_20ssp</dimen>
+
+
+    <dimen name="startPaddingNormal">@dimen/_10ssp</dimen>
+    <dimen name="unSeenCountSize">@dimen/_16ssp</dimen>
+    <dimen name="startPaddingUnSeenCountSize">@dimen/_5sdp</dimen>
+    <dimen name="topPaddingUnSeenCountSize">@dimen/_2sdp</dimen>
+    <dimen name="unSeenCountTextSize">@dimen/_7sdp</dimen>
+
+    <dimen name="etHorizontalPadding">@dimen/_10sdp</dimen>
+    <dimen name="etVerticalPadding">@dimen/_13sdp</dimen>
+
+    <dimen name="roundDrawableCommon">@dimen/_5sdp</dimen>
+    <dimen name="roundRecodingDrawableCommon">@dimen/_5sdp</dimen>
+
+    <dimen name="popSideMargin">@dimen/_12sdp</dimen>
+    <dimen name="startMainMargin">@dimen/_18sdp</dimen>
+    <dimen name="topMarginTitle">@dimen/_45sdp</dimen>
+    <dimen name="mobileTitleTextSize">@dimen/_18ssp</dimen>
+    <dimen name="topFiveMargin">@dimen/_5sdp</dimen>
+    <dimen name="topTwentyFiveMargin">@dimen/_25sdp</dimen>
+
+    <dimen name="line_spacing_extra">@dimen/_5sdp</dimen>
+
+    <dimen name="margin_from_signup">@dimen/_3sdp</dimen>
+    <dimen name="checkbox_size">@dimen/_16sdp</dimen>
+
+    <dimen name="arrow_size">@dimen/_22sdp</dimen>
+
+    <dimen name="group_banner_height">@dimen/_100sdp</dimen>
+    <dimen name="cardview_popup_back_radius">@dimen/_6sdp</dimen>
+
+    <dimen name="plus_icon_size">@dimen/_20sdp</dimen>
+    <dimen name="add_memeber_margin_left">@dimen/_7sdp</dimen>
+
+    <dimen name="menu_line_height">@dimen/_1sdp</dimen>
+    <dimen name="three">@dimen/_32sdp</dimen>
+    <dimen name="threePlus">@dimen/_42sdp</dimen>
+
+    <dimen name="text_letter_spacing">0.07</dimen>
+
+    <dimen name="roundDrawableCommon_bottom">@dimen/_10sdp</dimen>
+    <dimen name="drawableEtPadding">@dimen/_5sdp</dimen>
+
+    <dimen name="profile_start_margin">@dimen/_20sdp</dimen>
+    <dimen name="user_info_box">@dimen/_35sdp</dimen>
+    <bool name="isTab">true</bool>
+
+    <dimen name="signup_process_weight_sum">3</dimen>
+    <dimen name="signup_process_weight">2</dimen>
+    <dimen name="signup_process_top_logo_width">@dimen/_164sdp</dimen>
+    <dimen name="signup_process_top_logo_height">@dimen/_73sdp</dimen>
+
+    <dimen name="outside_cross_height">@dimen/_15sdp</dimen>
+    <dimen name="outside_cross_width">@dimen/_15sdp</dimen>
+
+    <dimen name="error_margin_start">@dimen/_10sdp</dimen>
+
+    <dimen name="space_between_error">@dimen/_5sdp</dimen>
+</resources>

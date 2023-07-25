@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="vModel"
+            type="com.yapi.views.create_team.third_step_create_team.ThirdStepViewModel" />
+
+    </data>
+    <LinearLayout
+        android:id="@+id/linearTopThirdStep"
+        android:onClick="@{vModel::onClick}"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/screen_background"
+        android:orientation="vertical"
+        android:weightSum="100">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="35">
+
+            <ImageView
+                android:layout_width="@dimen/signup_process_top_logo_width"
+                android:layout_height="@dimen/signup_process_top_logo_height"
+
+                android:layout_centerInParent="true"
+                android:src="@drawable/logo" />
+        </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+
+        android:orientation="horizontal"
+        android:layout_weight="65"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_horizontal"
+        android:weightSum="@dimen/signup_process_weight_sum"
+        >
+        <LinearLayout
+            android:layout_width="0dp"
+            android:orientation="vertical"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="@color/white"
+            android:layout_weight="@dimen/signup_process_weight">
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintsTopThirdStep"
+                    android:onClick="@{vModel::onClick}"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/_10sdp">
+
+                    <TextView
+                        android:id="@+id/tvFirstStepSize"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_25sdp"
+                        android:fontFamily="@font/larsseit_bold"
+                        android:text="@string/third_stemp_size"
+                        android:textAllCaps="true"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_12ssp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tvFirsTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:fontFamily="@font/larsseit_bold"
+                        android:gravity="center"
+                        android:text="@string/add_your_team_mates"
+                        android:textColor="@color/darkGrey"
+                        android:letterSpacing="0.03"
+                        android:textSize="@dimen/mobileTitleTextSize"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tvFirstStepSize" />
+
+                    <TextView
+                        android:id="@+id/tvFirsDescription"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:fontFamily="@font/larsseit_regular"
+                        android:gravity="center"
+                        android:letterSpacing="0.07"
+                        android:lineSpacingExtra="@dimen/line_spacing_extra"
+                        android:text="@string/third_step_description"
+                        android:textColor="@color/darkLiteGrey"
+                        android:textSize="@dimen/_12ssp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tvFirsTitle" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnInviteCRM"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:layout_marginStart="@dimen/startMainMargin"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:layout_marginEnd="@dimen/startMainMargin"
+                        android:background="@drawable/rounded_background"
+                        android:backgroundTint="@color/liteBlueForDrawable"
+                        android:fontFamily="@font/larsseit_bold"
+                        android:onClick="@{vModel::onClick}"
+                        android:paddingStart="@dimen/etHorizontalPadding"
+                        android:paddingTop="@dimen/etVerticalPadding"
+                        android:paddingEnd="@dimen/etHorizontalPadding"
+                        android:paddingBottom="@dimen/etVerticalPadding"
+                        android:stateListAnimator="@null"
+                        android:text="@string/invites_from_crm_text"
+                        android:textColor="@color/blueColor"
+                        android:textSize="@dimen/normalTextSize"
+                        app:layout_constraintTop_toBottomOf="@+id/tvFirsDescription" />
+
+                    <TextView
+                        android:id="@+id/tvORText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:fontFamily="@font/larsseit_bold"
+                        android:text="OR"
+                        android:textColor="#000000"
+                        android:textSize="@dimen/_12ssp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/btnInviteCRM" />
+
+                    <View
+                        android:id="@+id/viewFirstOR"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_1sdp"
+                        android:layout_marginStart="@dimen/_15sdp"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:background="@color/liteGrey"
+                        app:layout_constraintBottom_toBottomOf="@+id/tvORText"
+                        app:layout_constraintEnd_toStartOf="@+id/tvORText"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/tvORText" />
+
+                    <View
+                        android:id="@+id/viewSecondOR"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_1sdp"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:layout_marginEnd="@dimen/_15sdp"
+                        android:background="@color/liteGrey"
+                        app:layout_constraintBottom_toBottomOf="@+id/tvORText"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/tvORText"
+                        app:layout_constraintTop_toTopOf="@+id/tvORText" />
+
+                    <TextView
+                        android:id="@+id/tvteamField"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/startMainMargin"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:fontFamily="@font/larsseit_medium"
+                        android:gravity="center"
+                        android:text="@string/members_email_title"
+                        android:textAllCaps="true"
+                        android:textColor="@color/darkGrey"
+                        android:textSize="@dimen/_11ssp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tvORText" />
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/layoutAddPeopleAddPeopleEmail"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/topFiveMargin"
+                        android:background="@drawable/et_drawable"
+                        android:backgroundTint="@color/white"
+                        android:padding="@dimen/_5sdp"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toTopOf="@+id/chipLayoutAddPeopleEmail"
+                        app:layout_constraintEnd_toEndOf="@+id/btnInviteCRM"
+                        app:layout_constraintStart_toStartOf="@+id/btnInviteCRM">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/txtUserNameAddPeopleEmail"
+                            android:layout_width="@dimen/_40sdp"
+                            android:layout_height="@dimen/_40sdp"
+                            android:background="@drawable/round_circle_blue"
+                            android:clipToOutline="true"
+                            android:gravity="center"
+                            android:text="p"
+                            android:textAllCaps="true"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_18ssp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/txtTempAddPeopleAddPeopleEmail"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/topMargin"
+                            android:layout_marginTop="@dimen/topFiveMargin"
+                            android:fontFamily="@font/larsseit_bold"
+                            android:text="Add People"
+                            android:textColor="@color/blueColor"
+                            android:textSize="@dimen/normalTextSize"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/txtUserNameAddPeopleEmail"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/txtAddPeopleAddPeopleEmail"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/larsseit_medium"
+                            android:text="Damanpreet@gmail.com"
+                            android:textColor="@color/darkLiteGrey"
+                            android:textSize="@dimen/normalSmallTextSize"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="@+id/txtTempAddPeopleAddPeopleEmail"
+                            app:layout_constraintTop_toBottomOf="@+id/txtTempAddPeopleAddPeopleEmail" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/chipLayoutAddPeopleEmail"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/topFiveMargin"
+                        android:background="@drawable/et_drawable"
+                        android:paddingStart="@dimen/_1sdp"
+                        android:paddingTop="@dimen/_1sdp"
+                        android:paddingEnd="@dimen/_1sdp"
+                        android:paddingBottom="@dimen/_1sdp"
+
+                        app:layout_constraintEnd_toEndOf="@id/btnInviteCRM"
+                        app:layout_constraintStart_toStartOf="@id/tvteamField"
+                        app:layout_constraintTop_toBottomOf="@+id/tvteamField">
+
+                        <com.google.android.material.chip.ChipGroup
+                            android:id="@+id/chipGroupAddPeopleEmail"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_5sdp"
+
+                            android:textSize="@dimen/normalTextSize"
+                            app:chipSpacing="@dimen/_1sdp"
+                            app:chipSpacingVertical="@dimen/_minus10sdp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_chainStyle="spread_inside"></com.google.android.material.chip.ChipGroup>
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/etMemberEmail"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/et_drawable"
+                            android:backgroundTint="@color/information_profile_back_box"
+                            android:hint="@string/enter_email"
+                            android:paddingStart="@dimen/etHorizontalPadding"
+                            android:paddingTop="@dimen/etVerticalPadding"
+                            android:paddingEnd="@dimen/etHorizontalPadding"
+                            android:paddingBottom="@dimen/etVerticalPadding"
+                            android:singleLine="true"
+                            android:textColor="@color/black"
+                            android:textColorHint="@color/darkLiteGrey"
+                            android:textSize="@dimen/normalTextSize"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/chipGroupAddPeopleEmail" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txtErrorEmailSignup"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/error_margin_start"
+                        android:fontFamily="@font/larsseit_regular"
+                        android:text=""
+                        android:textColor="@color/red"
+                        android:textSize="@dimen/smallTextSize"
+                        android:visibility="visible"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/chipLayoutAddPeopleEmail"
+                        app:layout_constraintTop_toBottomOf="@+id/chipLayoutAddPeopleEmail" />
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/constraintsAddMember"
+                        android:layout_width="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@+id/txtErrorEmailSignup"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:layout_marginTop="@dimen/_2sdp"
+                        android:paddingStart="0dp"
+                        android:visibility="gone"
+                        android:onClick="@{vModel::onClick}"
+                        android:paddingTop="@dimen/_10sdp"
+                        android:paddingBottom="@dimen/_20sdp"
+                        android:paddingEnd="@dimen/_10sdp"
+                        android:layout_marginStart="@dimen/startMainMargin"
+                        android:layout_marginEnd="@dimen/startMainMargin"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:id="@+id/ivaddMember"
+                            android:src="@drawable/add_member"
+                            android:backgroundTint="@color/blueColor"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            android:layout_width="@dimen/plus_icon_size"
+                            android:layout_height="@dimen/plus_icon_size"/>
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:lineSpacingExtra="@dimen/line_spacing_extra"
+                            android:fontFamily="@font/larsseit_regular"
+                            android:text="@string/add_member_text_third_step"
+                            android:textColor="@color/blueColor"
+                            android:layout_marginStart="@dimen/add_memeber_margin_left"
+                            android:textSize="@dimen/_12ssp"
+
+                            app:layout_constraintTop_toTopOf="@+id/ivaddMember"
+                            app:layout_constraintBottom_toBottomOf="@+id/ivaddMember"
+                            android:layout_marginEnd="@dimen/startMainMargin"
+                           app:layout_constraintStart_toEndOf="@+id/ivaddMember"
+                            android:layout_height="wrap_content"/>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+            </androidx.core.widget.NestedScrollView>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/bottomMarggin"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/firstTeamCheck">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnThirdCreateTeam"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_marginStart="@dimen/startMainMargin"
+                    android:layout_marginEnd="@dimen/startMainMargin"
+                    android:onClick="@{vModel::onClick}"
+                    android:textSize="@dimen/normalTextSize"
+                    android:paddingStart="@dimen/etHorizontalPadding"
+                    android:paddingTop="@dimen/etVerticalPadding"
+                    android:paddingEnd="@dimen/etHorizontalPadding"
+                    android:paddingBottom="@dimen/etVerticalPadding"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:background="@drawable/rounded_background"
+                    android:backgroundTint="@color/blueColor"
+                    android:fontFamily="@font/larsseit_bold"
+                    android:text="@string/add_teammates_text"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    app:layout_constraintBottom_toTopOf="@+id/tvSkipStep"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvSkipStep"
+                    android:layout_width="wrap_content"
+                    android:fontFamily="@font/larsseit_regular"
+                    android:text="@string/skip_this_step"
+                    android:textColor="@color/blueColor"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:textSize="@dimen/_12ssp"
+                    android:onClick="@{vModel::onClick}"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_marginEnd="@dimen/startMainMargin"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_height="wrap_content"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</layout>

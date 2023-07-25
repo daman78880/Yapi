@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="vModel"
+            type="com.yapi.views.workspaces.openWorkspace.OpenWorkspaceViewModel" />
+        <variable
+            name="mView"
+            type="android.view.View" />
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="@dimen/_15sdp"
+        android:layout_marginBottom="@dimen/_3sdp">
+
+        <ImageView
+            android:id="@+id/txtOpenWorkspaceBack"
+            android:layout_width="@dimen/bigIconSize"
+            android:layout_height="@dimen/bigIconSize"
+            android:layout_gravity="center"
+            android:onClick="@{vModel::onClick}"
+            android:layout_marginStart="@dimen/startMainMargin"
+            android:src="@drawable/arrow_forward"
+            android:rotation="180"
+            app:tint="@color/chatbottom_grey_color"
+            android:visibility="@{vModel.showBackButton?mView.VISIBLE:mView.GONE}"
+            app:layout_constraintBottom_toBottomOf="@+id/tvWorkspaceText"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tvWorkspaceText" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvWorkspaceText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_12sdp"
+            android:fontFamily="@font/larsseit_bold"
+            android:text="@string/workspace_title"
+            app:layout_constraintTop_toTopOf="parent"
+            android:textColor="@color/darkGrey"
+            android:textSize="@dimen/titleTextSize"
+            app:layout_constraintStart_toEndOf="@+id/txtOpenWorkspaceBack" />
+
+        <LinearLayout
+            android:id="@+id/linearTopWorkspaces"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/startMainMargin"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/startMainMargin"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvWorkspaceText">
+
+            <LinearLayout
+                android:id="@+id/linearSearchWorkspaces"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_9sdp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_drawable_blue"
+                android:backgroundTint="@color/liteGrey"
+                android:gravity="start"
+                android:padding="@dimen/_10sdp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/iconSize"
+                    android:layout_height="@dimen/iconSize"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="@dimen/_7sdp"
+                    android:src="@drawable/search"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    app:tint="@color/medium_grey_color" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/btnSearch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:background="@android:color/transparent"
+                    android:fontFamily="@font/larsseit_regular"
+                    android:text="@string/search_text"
+                    android:textColor="@color/medium_grey_color"
+                    android:textSize="@dimen/normalTextSize" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearAddWorkspaces"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_9sdp"
+                android:layout_weight="1"
+                android:onClick="@{vModel::onClick}"
+                android:background="@drawable/btn_drawable_blue"
+                android:gravity="center_horizontal"
+                android:padding="@dimen/_10sdp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/iconSize"
+                    android:layout_height="@dimen/iconSize"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="@dimen/_3sdp"
+                    android:src="@drawable/plus_icon"
+                    app:tint="@color/white" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/btnAddWorkspace"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:backgroundTint="@color/darkBlueBtn"
+                    android:fontFamily="@font/larsseit_regular"
+                    android:gravity="center"
+                    android:text="@string/add_text_values"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/normalTextSize" />
+            </LinearLayout>
+        </LinearLayout>
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvWorkspaceName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/larsseit_bold"
+            android:text="Airpros USA"
+            android:layout_marginTop="@dimen/_15sdp"
+            app:layout_constraintTop_toBottomOf="@id/linearTopWorkspaces"
+            android:textColor="@color/darkGrey"
+            android:textSize="@dimen/extraNormalTextSize"
+            app:layout_constraintStart_toStartOf="@id/linearTopWorkspaces" />
+
+<LinearLayout
+    app:layout_constraintTop_toBottomOf="@id/tvWorkspaceName"
+    android:id="@+id/linearAllOpenWorkspaceTabs"
+    app:layout_constraintStart_toStartOf="@id/linearTopWorkspaces"
+    app:layout_constraintEnd_toEndOf="@+id/linearTopWorkspaces"
+    android:layout_width="0dp"
+    android:layout_marginTop="@dimen/_7sdp"
+    android:weightSum="5"
+    android:paddingTop="@dimen/_10sdp"
+    android:background="@color/liteGrey"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constarintsRegions"
+        android:onClick="@{vModel::onClick}"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content">
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvRegionsText"
+            android:layout_width="0dp"
+            android:text="@string/region"
+            android:textSize="@dimen/_10ssp"
+            android:textColor="@{vModel.regionsAvailabile?@color/darkBlueBtn:@color/darkGrey}"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:fontFamily="@font/larsseit_bold"
+            android:textAllCaps="true"
+            android:gravity="center_horizontal"
+            android:layout_height="wrap_content"/>
+        <View
+            android:id="@+id/view_line_regions"
+            android:layout_width="0dp"
+            android:visibility="@{vModel.regionsAvailabile?mView.VISIBLE:mView.INVISIBLE}"
+            app:layout_constraintTop_toBottomOf="@+id/tvRegionsText"
+            android:background="@color/darkBlueBtn"
+            android:layout_marginTop="@dimen/_10sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_height="@dimen/_2sdp"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constarintsBusiness"
+        android:onClick="@{vModel::onClick}"
+        android:layout_width="0dp"
+        android:layout_weight="2"
+        android:layout_height="wrap_content">
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvBusinessUnitsText"
+            android:layout_width="0dp"
+            android:text="@string/business_unit_text"
+            android:textSize="@dimen/_10ssp"
+            android:textColor="@{vModel.bussinesUnitsAvailabile?@color/darkBlueBtn:@color/darkGrey}"
+            android:gravity="center_horizontal"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:fontFamily="@font/larsseit_bold"
+            android:textAllCaps="true"
+            android:layout_height="wrap_content"/>
+        <View
+            android:id="@+id/view_line_business"
+            android:layout_width="0dp"
+            app:layout_constraintTop_toBottomOf="@+id/tvBusinessUnitsText"
+            android:background="@color/darkBlueBtn"
+            android:visibility="@{vModel.bussinesUnitsAvailabile?mView.VISIBLE:mView.INVISIBLE}"
+            android:layout_marginTop="@dimen/_10sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_height="@dimen/_2sdp"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constarintsJobTypes"
+        android:onClick="@{vModel::onClick}"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content">
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvJobTypesText"
+            android:layout_width="0dp"
+            android:text="@string/job_type_text"
+            android:textSize="@dimen/_10ssp"
+            android:textColor="@{vModel.jobTypeAvailabile?@color/darkBlueBtn:@color/darkGrey}"
+            android:gravity="center_horizontal"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:fontFamily="@font/larsseit_bold"
+            android:textAllCaps="true"
+            android:layout_height="wrap_content"/>
+        <View
+            android:id="@+id/view_line_job_types"
+            android:layout_width="0dp"
+            app:layout_constraintTop_toBottomOf="@+id/tvJobTypesText"
+            android:background="@color/darkBlueBtn"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:visibility="@{vModel.jobTypeAvailabile?mView.VISIBLE:mView.INVISIBLE}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_height="@dimen/_2sdp"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constarintsUsers"
+        android:onClick="@{vModel::onClick}"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content">
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvUsersText"
+            android:layout_width="0dp"
+            android:text="@string/users_text"
+            android:textSize="@dimen/_10ssp"
+            android:textColor="@{vModel.usersAvailabile?@color/darkBlueBtn:@color/darkGrey}"
+
+            android:gravity="center_horizontal"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:fontFamily="@font/larsseit_bold"
+            android:textAllCaps="true"
+            android:layout_height="wrap_content"/>
+        <View
+            android:id="@+id/view_line_users"
+            android:layout_width="0dp"
+            android:visibility="@{vModel.usersAvailabile?mView.VISIBLE:mView.INVISIBLE}"
+            app:layout_constraintTop_toBottomOf="@+id/tvUsersText"
+            android:background="@color/darkBlueBtn"
+            android:layout_marginTop="@dimen/_10sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_height="@dimen/_2sdp"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearAddRegions"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_9sdp"
+            android:onClick="@{vModel::onClick}"
+            app:layout_constraintEnd_toEndOf="@id/linearTopWorkspaces"
+            app:layout_constraintTop_toBottomOf="@id/linearAllOpenWorkspaceTabs"
+            android:background="@drawable/btn_drawable_blue"
+            android:backgroundTint="@color/region_button_back"
+            android:gravity="center_horizontal"
+            android:visibility="@{vModel.regionsAvailabile?mView.VISIBLE:mView.GONE}"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:padding="@dimen/_10sdp">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="@dimen/iconSize"
+                android:layout_height="@dimen/iconSize"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="@dimen/_3sdp"
+                android:src="@drawable/plus_icon"
+                app:tint="@color/darkBlueBtn" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/btnAddRegions"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:backgroundTint="@color/darkBlueBtn"
+                android:fontFamily="@font/larsseit_regular"
+                android:gravity="center"
+                android:text="@string/region"
+                android:textAllCaps="true"
+                android:textColor="@color/darkBlueBtn"
+                android:textSize="@dimen/normalTextSize" />
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvOpenWorkspaceList"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="@dimen/startMainMargin"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/startMainMargin"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearAddRegions" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/_400sdp"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:elevation="@dimen/_5sdp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="@dimen/cardview_popup_back_radius"
+        app:cardElevation="@dimen/_5sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvEditMessages"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="vertical" />
+            <!--       <androidx.constraintlayout.widget.ConstraintLayout
+                       android:id="@+id/constraintsReplyMessage"
+                       android:layout_width="0dp"
+                       android:layout_height="wrap_content"
+                       android:paddingTop="@dimen/_10sdp"
+                       android:paddingBottom="@dimen/_10sdp"
+                       app:layout_constraintEnd_toEndOf="parent"
+                       app:layout_constraintStart_toStartOf="parent"
+                       app:layout_constraintTop_toTopOf="parent">
+
+                       <ImageView
+                           android:id="@+id/ivReplyMessage"
+                           android:layout_width="@dimen/iconSize"
+                           android:layout_height="@dimen/iconSize"
+                           android:layout_marginStart="@dimen/_10sdp"
+                           android:src="@drawable/reply_message_icon"
+                           app:layout_constraintStart_toStartOf="parent"
+                           app:layout_constraintTop_toTopOf="parent" />
+
+                       <TextView
+                           android:id="@+id/tvReplymessage"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:layout_marginStart="@dimen/_10sdp"
+                           android:fontFamily="@font/larsseit_medium"
+                           android:text="@string/reply_message_text"
+                           android:textColor="@color/darkGrey"
+                           android:textSize="@dimen/normalTextSize"
+                           app:layout_constraintStart_toEndOf="@+id/ivReplyMessage"
+                           app:layout_constraintTop_toTopOf="parent" />
+                   </androidx.constraintlayout.widget.ConstraintLayout>
+
+                   <View
+                       android:id="@+id/view_menu5"
+                       android:layout_width="match_parent"
+                       android:layout_height="@dimen/_2sdp"
+                       android:background="#FAFAFA"
+                       app:layout_constraintEnd_toEndOf="parent"
+                       app:layout_constraintStart_toStartOf="parent"
+                       app:layout_constraintTop_toBottomOf="@+id/constraintsReplyMessage" />
+
+                   <androidx.constraintlayout.widget.ConstraintLayout
+                       android:id="@+id/constraintsEditMessage"
+                       android:layout_width="0dp"
+                       android:layout_height="wrap_content"
+                       android:paddingTop="@dimen/_10sdp"
+                       android:paddingBottom="@dimen/_10sdp"
+                       app:layout_constraintEnd_toEndOf="parent"
+                       app:layout_constraintStart_toStartOf="parent"
+                       app:layout_constraintTop_toBottomOf="@+id/view_menu5">
+
+                       <ImageView
+                           android:id="@+id/ivEditMessage"
+                           android:layout_width="@dimen/iconSize"
+                           android:layout_height="@dimen/iconSize"
+                           android:layout_marginStart="@dimen/_10sdp"
+                           android:src="@drawable/edit_message_icon"
+                           app:layout_constraintStart_toStartOf="parent"
+                           app:layout_constraintTop_toTopOf="parent" />
+
+                       <TextView
+                           android:id="@+id/tvEditmessage"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:layout_marginStart="@dimen/_10sdp"
+                           android:fontFamily="@font/larsseit_medium"
+                           android:text="@string/edit_message_text"
+                           android:textColor="@color/darkGrey"
+                           android:textSize="@dimen/normalTextSize"
+                           app:layout_constraintStart_toEndOf="@+id/ivEditMessage"
+                           app:layout_constraintTop_toTopOf="parent" />
+                   </androidx.constraintlayout.widget.ConstraintLayout>
+                   <View
+                       android:id="@+id/view_menu1"
+                       android:layout_width="match_parent"
+                       android:layout_height="@dimen/_2sdp"
+                       android:background="#FAFAFA"
+                       app:layout_constraintEnd_toEndOf="parent"
+                       app:layout_constraintStart_toStartOf="parent"
+                       app:layout_constraintTop_toBottomOf="@+id/constraintsEditMessage" />
+
+                   <androidx.constraintlayout.widget.ConstraintLayout
+                       android:id="@+id/constraintsSaveMessage"
+                       android:layout_width="0dp"
+                       android:layout_height="wrap_content"
+                       android:paddingTop="@dimen/_10sdp"
+                       android:paddingBottom="@dimen/_10sdp"
+                       app:layout_constraintEnd_toEndOf="parent"
+                       app:layout_constraintStart_toStartOf="parent"
+                       app:layout_constraintTop_toBottomOf="@+id/view_menu1">
+
+                       <ImageView
+                           android:id="@+id/ivSaveMessage"
+                           android:layout_width="@dimen/iconSize"
+                           android:layout_height="@dimen/iconSize"
+                           android:layout_marginStart="@dimen/_10sdp"
+                           android:src="@drawable/save_message"
+                           app:layout_constraintStart_toStartOf="parent"
+                           app:layout_constraintTop_toTopOf="parent" />
+
+                       <TextView
+                           android:id="@+id/tvSavemessage"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:layout_marginStart="@dimen/_10sdp"
+                           android:fontFamily="@font/larsseit_medium"
+                           android:text="@string/save_message_text"
+                           android:textColor="@color/darkGrey"
+                           android:textSize="@dimen/normalTextSize"
+                           app:layout_constraintStart_toEndOf="@+id/ivSaveMessage"
+                           app:layout_constraintTop_toTopOf="parent" />
+                   </androidx.constraintlayout.widget.ConstraintLayout>
+
+                   <View
+                       android:id="@+id/view_menu6"
+                       android:layout_width="match_parent"
+                       android:layout_height="@dimen/_2sdp"
+                       android:background="#FAFAFA"
+                       app:layout_constraintEnd_toEndOf="parent"
+                       app:layout_constraintStart_toStartOf="parent"
+                       app:layout_constraintTop_toBottomOf="@+id/constraintsSaveMessage" />
+                   <androidx.constraintlayout.widget.ConstraintLayout
+                       android:id="@+id/constraintsMarkUnread"
+                       android:layout_width="0dp"
+                       android:layout_height="wrap_content"
+                       android:paddingTop="@dimen/_10sdp"
+                       android:paddingBottom="@dimen/_10sdp"
+                       app:layout_constraintEnd_toEndOf="parent"
+                       app:layout_constraintStart_toStartOf="parent"
+                       app:layout_constraintTop_toBottomOf="@+id/view_menu6">
+
+                       <ImageView
+                           android:id="@+id/ivMarkUnread"
+                           android:layout_width="@dimen/iconSize"
+                           android:layout_height="@dimen/iconSize"
+                           android:layout_marginStart="@dimen/_10sdp"
+                           android:src="@drawable/mark_as_unread"
+                           app:layout_constraintStart_toStartOf="parent"
+                           app:layout_constraintTop_toTopOf="parent" />
+
+                       <TextView
+                           android:id="@+id/tvMarkUnread"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:layout_marginStart="@dimen/_10sdp"
+                           android:fontFamily="@font/larsseit_medium"
+                           android:text="@string/mark_unread_text"
+                           android:textColor="@color/darkGrey"
+                           android:textSize="@dimen/normalTextSize"
+                           app:layout_constraintStart_toEndOf="@+id/ivMarkUnread"
+                           app:layout_constraintTop_toTopOf="parent" />
+                   </androidx.constraintlayout.widget.ConstraintLayout>
+
+                   <View
+                       android:id="@+id/view_menu7"
+                       android:layout_width="match_parent"
+                       android:layout_height="@dimen/_2sdp"
+                       android:background="#FAFAFA"
+                       app:layout_constraintEnd_toEndOf="parent"
+                       app:layout_constraintStart_toStartOf="parent"
+                       app:layout_constraintTop_toBottomOf="@+id/constraintsMarkUnread" />
+
+                   <androidx.constraintlayout.widget.ConstraintLayout
+                       android:id="@+id/constraintsCopyMessage"
+                       android:layout_width="0dp"
+                       android:layout_height="wrap_content"
+                       android:paddingBottom="@dimen/_10sdp"
+                       app:layout_constraintEnd_toEndOf="parent"
+                       app:layout_constraintStart_toStartOf="parent"
+                       app:layout_constraintTop_toBottomOf="@+id/view_menu7">
+
+                       <ImageView
+                           android:id="@+id/ivCopyMessage"
+                           android:layout_width="@dimen/iconSize"
+                           android:layout_height="@dimen/iconSize"
+                           android:layout_marginStart="@dimen/_10sdp"
+                           android:layout_marginTop="@dimen/_10sdp"
+                           android:src="@drawable/copy_message_icon"
+                           app:layout_constraintStart_toStartOf="parent"
+                           app:layout_constraintTop_toTopOf="parent" />
+
+                       <TextView
+                           android:id="@+id/tvCopyMessage"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:layout_marginStart="@dimen/_10sdp"
+                           android:layout_marginTop="@dimen/_10sdp"
+                           android:fontFamily="@font/larsseit_medium"
+                           android:text="@string/copy_message_text"
+                           android:textColor="@color/darkGrey"
+                           android:textSize="@dimen/normalTextSize"
+                           app:layout_constraintStart_toEndOf="@+id/ivCopyMessage"
+
+                           app:layout_constraintTop_toTopOf="parent" />
+                   </androidx.constraintlayout.widget.ConstraintLayout>
+
+                   <View
+                       android:id="@+id/viewMenu2"
+                       android:layout_width="match_parent"
+                       android:layout_height="@dimen/_2sdp"
+                       android:background="#FAFAFA"
+                       app:layout_constraintEnd_toEndOf="parent"
+                       app:layout_constraintStart_toStartOf="parent"
+                       app:layout_constraintTop_toBottomOf="@+id/constraintsCopyMessage" />
+
+                   <androidx.constraintlayout.widget.ConstraintLayout
+                       android:id="@+id/constraintsPinConverrsation"
+                       android:layout_width="0dp"
+                       android:layout_height="wrap_content"
+                       android:paddingBottom="@dimen/_10sdp"
+                       app:layout_constraintEnd_toEndOf="parent"
+                       app:layout_constraintStart_toStartOf="parent"
+                       app:layout_constraintTop_toBottomOf="@+id/viewMenu2">
+
+                       <ImageView
+                           android:id="@+id/ivPinConverrsation"
+                           android:layout_width="@dimen/iconSize"
+                           android:layout_height="@dimen/iconSize"
+                           android:layout_marginStart="@dimen/_10sdp"
+                           android:layout_marginTop="@dimen/_10sdp"
+                           android:src="@drawable/push_pin"
+                           app:layout_constraintStart_toStartOf="parent"
+                           app:layout_constraintTop_toTopOf="parent" />
+
+                       <TextView
+                           android:id="@+id/tvPinConverrsation"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:layout_marginStart="@dimen/_10sdp"
+                           android:layout_marginTop="@dimen/_10sdp"
+                           android:fontFamily="@font/larsseit_medium"
+                           android:text="@string/pin_conversation_text"
+                           android:textColor="@color/darkGrey"
+                           android:textSize="@dimen/normalTextSize"
+                           app:layout_constraintStart_toEndOf="@+id/ivPinConverrsation"
+
+                           app:layout_constraintTop_toTopOf="parent" />
+                   </androidx.constraintlayout.widget.ConstraintLayout>
+
+                   <View
+                       android:id="@+id/viewMenu8"
+                       android:layout_width="match_parent"
+                       android:layout_height="@dimen/_2sdp"
+                       android:background="#FAFAFA"
+                       app:layout_constraintEnd_toEndOf="parent"
+                       app:layout_constraintStart_toStartOf="parent"
+                       app:layout_constraintTop_toBottomOf="@+id/constraintsPinConverrsation" />
+
+                   <androidx.constraintlayout.widget.ConstraintLayout
+                       android:id="@+id/constraintsDeleteMessage"
+                       android:layout_width="0dp"
+                       android:layout_height="wrap_content"
+                       android:paddingBottom="@dimen/_10sdp"
+                       app:layout_constraintEnd_toEndOf="parent"
+                       app:layout_constraintStart_toStartOf="parent"
+                       app:layout_constraintTop_toBottomOf="@+id/viewMenu8">
+
+                       <ImageView
+                           android:id="@+id/ivDeleteMessage"
+                           android:layout_width="@dimen/iconSize"
+                           android:layout_height="@dimen/iconSize"
+                           android:layout_marginStart="@dimen/_10sdp"
+                           android:layout_marginTop="@dimen/_10sdp"
+                           android:src="@drawable/delete_chat_icon"
+                           app:tint="@color/darkRed"
+                           app:layout_constraintStart_toStartOf="parent"
+                           app:layout_constraintTop_toTopOf="parent" />
+
+                       <TextView
+                           android:id="@+id/tvDeleteChat"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:layout_marginStart="@dimen/_10sdp"
+                           android:layout_marginTop="@dimen/_10sdp"
+                           android:fontFamily="@font/larsseit_medium"
+                           android:text="@string/delete_message_text"
+                           android:textColor="@color/darkRed"
+                           android:textSize="@dimen/normalTextSize"
+                           app:layout_constraintStart_toEndOf="@+id/ivDeleteMessage"
+                           app:layout_constraintTop_toTopOf="parent" />
+
+                   </androidx.constraintlayout.widget.ConstraintLayout>-->
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

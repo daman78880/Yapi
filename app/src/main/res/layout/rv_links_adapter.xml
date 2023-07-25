@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <androidx.cardview.widget.CardView
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginBottom="@dimen/_5sdp"
+        app:cardBackgroundColor="@color/information_profile_back_box"
+        app:cardCornerRadius="@dimen/_5sdp"
+        app:cardElevation="0dp"
+        android:elevation="0dp"
+        android:layout_height="wrap_content">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_gravity="center"
+    android:layout_marginTop="@dimen/_8sdp"
+    android:layout_marginBottom="@dimen/_8sdp"
+    android:layout_marginStart="@dimen/startMainMargin"
+    android:layout_marginEnd="@dimen/startMainMargin"
+    android:layout_height="wrap_content">
+<com.yapi.common.RoundRectCornerImageView
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    android:id="@+id/ivLinkPhoto"
+    android:src="@drawable/temp_photo"
+    android:layout_width="@dimen/_50sdp"
+    android:layout_height="@dimen/_50sdp"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        app:layout_constraintStart_toEndOf="@+id/ivLinkPhoto"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:id="@+id/tvLinkText"
+        app:layout_constraintTop_toTopOf="@id/ivLinkPhoto"
+        app:layout_constraintBottom_toBottomOf="@id/ivLinkPhoto"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:text="https://dribbble.com shots/20330765-Division...."
+        android:layout_width="0dp"
+        android:textSize="@dimen/smallTextSize"
+        android:letterSpacing="@dimen/text_letter_spacing"
+        android:lineSpacingExtra="@dimen/line_spacing_extra"
+        android:fontFamily="@font/larsseit_regular"
+        android:textColor="@color/medium_grey_color"
+        android:layout_height="wrap_content"/>
+
+    <View
+        android:id="@+id/viewLinkLine"
+        app:layout_constraintTop_toBottomOf="@id/ivLinkPhoto"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_1sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+       android:layout_marginTop="@dimen/_10sdp"
+       android:background="@color/chat_bottom_line_color" />
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+  app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:id="@+id/tvViewMessages"
+       app:layout_constraintTop_toBottomOf="@id/viewLinkLine"
+
+        android:text="@string/view_messages_text"
+        android:textAllCaps="true"
+        android:layout_width="0dp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:textSize="@dimen/smallTextSize"
+        android:letterSpacing="@dimen/text_letter_spacing"
+        android:lineSpacingExtra="@dimen/line_spacing_extra"
+        android:fontFamily="@font/larsseit_bold"
+        android:textColor="@color/darkGrey"
+        android:layout_height="wrap_content"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivLinkArraow"
+        android:layout_width="@dimen/iconSize"
+        android:layout_height="@dimen/iconSize"
+        android:layout_marginStart="@dimen/_minus3sdp"
+        android:rotation="270"
+        android:src="@drawable/ic_baseline_keyboard_arrow_down_24"
+        app:layout_constraintBottom_toBottomOf="@id/tvViewMessages"
+        app:layout_constraintTop_toTopOf="@id/tvViewMessages"
+        app:layout_constraintEnd_toEndOf="parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+</layout>

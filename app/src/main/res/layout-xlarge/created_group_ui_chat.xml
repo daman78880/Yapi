@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:id="@+id/groupScreenInfoEmpty"
+    android:background="#FAFAFA"
+    android:layout_height="wrap_content">
+<androidx.appcompat.widget.AppCompatTextView
+    android:id="@+id/tvGroupChatTitle"
+    android:text="@string/created_group_title_chat"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    android:layout_width="0dp"
+    android:letterSpacing="@dimen/text_letter_spacing"
+    android:lineSpacingExtra="@dimen/line_spacing_extra"
+    android:textSize="@dimen/extraNormalTextSize"
+    android:fontFamily="@font/larsseit_medium"
+    android:textColor="@color/darkBlueBtn"
+    android:gravity="center_horizontal"
+    android:layout_height="wrap_content"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvGroupsHave"
+        android:text="@string/groups_can_have"
+        app:layout_constraintTop_toBottomOf="@+id/tvGroupChatTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="wrap_content"
+        android:letterSpacing="@dimen/text_letter_spacing"
+        android:lineSpacingExtra="@dimen/line_spacing_extra"
+        android:textSize="@dimen/normalTextSize"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:fontFamily="@font/larsseit_regular"
+        android:textColor="@color/medium_grey_color"
+        android:gravity="center_horizontal"
+        android:layout_height="wrap_content"/>
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvPersistent_chat"
+        android:text="@string/persistant_chat_history"
+        app:layout_constraintTop_toBottomOf="@+id/tvGroupsHave"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="wrap_content"
+        android:letterSpacing="@dimen/text_letter_spacing"
+        android:lineSpacingExtra="@dimen/line_spacing_extra"
+        android:textSize="@dimen/normalTextSize"
+        android:layout_marginTop="@dimen/_7sdp"
+        android:fontFamily="@font/larsseit_regular"
+        android:textColor="@color/medium_grey_color"
+        android:gravity="center_horizontal"
+        android:drawablePadding="@dimen/_6sdp"
+        android:drawableStart="@drawable/circle_bullet"
+        android:layout_height="wrap_content"/>
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvPublicLinks"
+        android:text="@string/public_links"
+        app:layout_constraintTop_toBottomOf="@+id/tvPersistent_chat"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="wrap_content"
+        android:textSize="@dimen/normalTextSize"
+        android:fontFamily="@font/larsseit_regular"
+        android:textColor="@color/medium_grey_color"
+        android:gravity="center_horizontal"
+        android:drawablePadding="@dimen/_6sdp"
+        android:letterSpacing="@dimen/text_letter_spacing"
+        android:lineSpacingExtra="@dimen/line_spacing_extra"
+        android:drawableStart="@drawable/circle_bullet"
+        android:layout_height="wrap_content"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvAdminManagers"
+        android:text="@string/admin_manager_text_chat"
+        app:layout_constraintTop_toBottomOf="@+id/tvPublicLinks"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="wrap_content"
+        android:fontFamily="@font/larsseit_regular"
+        android:textColor="@color/medium_grey_color"
+        android:gravity="center_horizontal"
+        android:letterSpacing="@dimen/text_letter_spacing"
+        android:lineSpacingExtra="@dimen/line_spacing_extra"
+        android:textSize="@dimen/normalTextSize"
+        android:drawablePadding="@dimen/_6sdp"
+        android:drawableStart="@drawable/circle_bullet"
+        android:layout_height="wrap_content"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnViewGroupInfoChat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/startMainMargin"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_marginEnd="@dimen/startMainMargin"
+        android:layout_marginBottom="@dimen/topFiveMargin"
+       android:paddingTop="@dimen/_7sdp"
+        android:paddingBottom="@dimen/_8sdp"
+        android:textSize="@dimen/normalSmallTextSize"
+        android:paddingEnd="@dimen/_20sdp"
+        android:paddingStart="@dimen/_20sdp"
+        android:letterSpacing="@dimen/text_letter_spacing"
+        android:lineSpacingExtra="@dimen/line_spacing_extra"
+        android:background="@drawable/btn_drawable_blue"
+        android:fontFamily="@font/larsseit_bold"
+        app:layout_constraintTop_toBottomOf="@+id/tvAdminManagers"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="@string/view_group_info"
+        android:textColor="@color/white" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

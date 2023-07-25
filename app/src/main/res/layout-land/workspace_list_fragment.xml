@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="vModel"
+            type="com.yapi.views.workspaces.workspacesList.WorkspaceViewModel" />
+
+        <variable
+            name="mView"
+            type="android.view.View" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/_3sdp"
+        android:paddingTop="@dimen/_15sdp">
+
+        <ImageView
+            android:id="@+id/txtWorkspaceBack"
+            android:layout_width="@dimen/bigIconSize"
+            android:layout_height="@dimen/bigIconSize"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/startMainMargin"
+            android:onClick="@{vModel::onClick}"
+            android:rotation="180"
+            android:src="@drawable/arrow_forward"
+            android:visibility="@{vModel.showBackButton?mView.VISIBLE:mView.GONE}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:tint="@color/chatbottom_grey_color" />
+
+        <LinearLayout
+            android:id="@+id/linearTopWorkspaces"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvWorkspaceText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_12sdp"
+                    android:fontFamily="@font/larsseit_bold"
+                    android:text="@string/workspace_title"
+                    android:textColor="@color/darkGrey"
+                    android:textSize="@dimen/titleTextSize"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvWorkspaceDescription"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_12sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:fontFamily="@font/larsseit_regular"
+                    android:text="Excepteur sint occaecat cupidatat non proident, sunt in."
+                    android:textColor="@color/medium_grey_color"
+                    android:textSize="@dimen/normalTextSize"
+                    app:layout_constraintEnd_toStartOf="@+id/linearTopWorkspaces"
+                    app:layout_constraintStart_toEndOf="@+id/txtWorkspaceBack"
+                    app:layout_constraintTop_toBottomOf="@id/tvWorkspaceText" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_1sdp"
+                android:layout_marginEnd="@dimen/_12sdp"
+                android:layout_weight="1"
+                android:gravity="end|center_vertical"
+                android:orientation="horizontal"
+                android:weightSum="5"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:background="@drawable/btn_drawable_blue"
+                    android:backgroundTint="@color/liteGrey"
+                    android:padding="@dimen/_10sdp">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="@dimen/iconSize"
+                        android:layout_height="@dimen/iconSize"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:layout_marginEnd="@dimen/_1sdp"
+                        android:src="@drawable/search"
+                        app:tint="@color/medium_grey_color" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/btnSearch"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:background="@android:color/transparent"
+                        android:fontFamily="@font/larsseit_regular"
+                        android:text="@string/search_text"
+                        android:textColor="@color/medium_grey_color"
+                        android:textSize="@dimen/normalTextSize" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearAddWorkspaces"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_weight="2"
+                    android:background="@drawable/btn_drawable_blue"
+                    android:gravity="center_horizontal"
+                    android:onClick="@{vModel::onClick}"
+                    android:padding="@dimen/_10sdp">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="@dimen/iconSize"
+                        android:layout_height="@dimen/iconSize"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="@dimen/_3sdp"
+                        android:src="@drawable/plus_icon"
+                        app:tint="@color/white" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/btnAddWorkspace"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:backgroundTint="@color/darkBlueBtn"
+                        android:fontFamily="@font/larsseit_regular"
+                        android:gravity="center"
+                        android:text="@string/add_workspace_text_values"
+                        android:textAllCaps="true"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/normalTextSize" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvWorkspaceList"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="@dimen/startMainMargin"
+            android:layout_marginTop="@dimen/_7sdp"
+            android:layout_marginEnd="@dimen/startMainMargin"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearTopWorkspaces" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

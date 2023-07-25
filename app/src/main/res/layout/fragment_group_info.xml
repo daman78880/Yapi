@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="model"
+            type="com.yapi.views.group_info.ViewModelGroupInfo" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:paddingTop="@dimen/popSideMargin"
+        tools:context=".views.group_info.GroupInfoFragment">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imgCancelGroupInfo"
+            android:layout_width="@dimen/iconSize"
+            android:layout_height="@dimen/iconSize"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:onClick="@{model::onClick}"
+            android:src="@drawable/ic_cross_icon"
+            android:layout_marginEnd="@dimen/popSideMargin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.yapi.common.RoundRectCornerImageView
+            android:id="@+id/imgGroupPicGroupInfo"
+            android:layout_width="@dimen/_58sdp"
+            android:layout_height="@dimen/_58sdp"
+            android:src="@drawable/demo_photo"
+            android:layout_marginStart="@dimen/popSideMargin"
+            android:layout_marginTop="@dimen/topFiveMargin"
+            app:layout_constraintTop_toBottomOf="@+id/imgCancelGroupInfo"
+            app:layout_constraintStart_toStartOf="parent"
+            />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtGroupNameGroupInfo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Aio group"
+            android:gravity="start"
+            android:textSize="@dimen/_15ssp"
+            android:textColor="@color/darkGrey"
+            android:fontFamily="@font/larsseit_bold"
+            android:layout_marginTop="@dimen/_3sdp"
+            android:layout_marginStart="@dimen/topFiveMargin"
+            app:layout_constraintTop_toTopOf="@+id/imgGroupPicGroupInfo"
+            app:layout_constraintBottom_toTopOf="@+id/txtMembersGroupInfo"
+            app:layout_constraintStart_toEndOf="@+id/imgGroupPicGroupInfo"
+            app:layout_constraintEnd_toStartOf="@+id/imgEditGroupInfo"
+            />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtMembersGroupInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="36members"
+            android:layout_marginBottom="@dimen/_3sdp"
+            android:textColor="@color/darkLiteGrey"
+            android:fontFamily="@font/larsseit_medium"
+            android:textSize="@dimen/normalSmallTextSize"
+            app:layout_constraintTop_toBottomOf="@+id/txtGroupNameGroupInfo"
+            app:layout_constraintBottom_toBottomOf="@+id/imgGroupPicGroupInfo"
+            app:layout_constraintStart_toStartOf="@+id/txtGroupNameGroupInfo"
+            />
+        <ImageView
+            android:id="@+id/txtTempDotGroupInfo"
+            android:layout_width="@dimen/_4sdp"
+            android:layout_height="@dimen/_4sdp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="@dimen/_8sdp"
+            app:tint="#E6E6E6"
+            app:layout_constraintTop_toTopOf="@+id/txtMembersGroupInfo"
+            app:layout_constraintBottom_toBottomOf="@+id/txtMembersGroupInfo"
+            app:layout_constraintStart_toEndOf="@+id/txtMembersGroupInfo"
+            android:src="@drawable/circle_bullet" />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtCreatedDateOfGroupInfo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/larsseit_medium"
+            android:gravity="start"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="January 15, 2022"
+            android:layout_marginStart="@dimen/topFiveMargin"
+            android:textColor="@color/darkLiteGrey"
+            android:textSize="@dimen/normalSmallTextSize"
+            app:layout_constraintEnd_toStartOf="@+id/imgEditGroupInfo"
+            app:layout_constraintStart_toEndOf="@+id/txtTempDotGroupInfo"
+            app:layout_constraintTop_toTopOf="@+id/txtMembersGroupInfo" />
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imgEditGroupInfo"
+            android:layout_width="@dimen/extraIconSize"
+            android:layout_height="@dimen/extraIconSize"
+            android:src="@drawable/chat_more_icon"
+            android:layout_marginEnd="@dimen/popSideMargin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/imgGroupPicGroupInfo"
+            app:layout_constraintBottom_toBottomOf="@+id/imgGroupPicGroupInfo"
+            />
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabLayoutGroupInfo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            app:tabRippleColor="@null"
+            app:tabSelectedTextColor="@color/blueColor"
+            app:tabTextColor="@color/darkGrey"
+            android:layout_marginStart="@dimen/popSideMargin"
+            android:layout_marginEnd="@dimen/popSideMargin"
+            app:tabMode="fixed"
+            app:tabGravity="fill"
+            app:tabMaxWidth="0dp"
+            app:tabPaddingBottom="@dimen/_4sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            app:tabBackground="@drawable/selector_tab_indicator"
+            app:tabIndicator="@android:color/transparent"
+            app:tabTextAppearance="@style/CustomTextAppearanceTab"
+            app:layout_constraintTop_toBottomOf="@+id/imgGroupPicGroupInfo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/viewPagerGroupInfo"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/_4sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tabLayoutGroupInfo"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

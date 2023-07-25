@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingStart="@dimen/popSideMargin"
+        android:fillViewport="true"
+        android:layout_marginBottom="@dimen/topFiveMargin"
+        android:paddingEnd="@dimen/popSideMargin">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingStart="@dimen/popSideMargin"
+    android:paddingEnd="@dimen/popSideMargin"
+   >
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnDoneGroupFiles"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_drawable_blue"
+        android:text="@string/edit_group"
+        android:backgroundTint="@color/darkBlueBtn"
+        android:layout_marginTop="@dimen/topNormalMargin"
+        android:padding="@dimen/etVerticalPadding"
+        android:textColor="@color/white"
+        android:fontFamily="@font/larsseit_bold"
+        android:textSize="@dimen/normalTextSize"
+        android:textAllCaps="true"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/etGroupNameGroupFiles"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/topTwentyFiveMargin"
+        android:background="@drawable/et_drawable"
+        android:drawableStart="@drawable/search"
+        android:drawablePadding="@dimen/_15sdp"
+        android:drawableTint="@color/drawableLiteGreyColor"
+        android:fontFamily="@font/larsseit_regular"
+        android:hint="@string/search_files"
+        android:inputType="text"
+        android:maxLength="128"
+android:imeOptions="actionDone"
+        android:paddingStart="@dimen/_18sdp"
+        android:paddingTop="@dimen/etVerticalPadding"
+        android:paddingEnd="@dimen/etHorizontalPadding"
+        android:paddingBottom="@dimen/etVerticalPadding"
+        android:textColor="@color/darkGrey"
+        android:textColorHint="@color/darkLiteGrey"
+        android:textSize="@dimen/normalTextSize"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnDoneGroupFiles" />
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtTempGroupImageGroupFiles"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/topTwentyFiveMargin"
+        android:fontFamily="@font/larsseit_medium"
+        android:text="@string/files"
+        android:textColor="@color/black"
+        android:textSize="@dimen/normalTextSize"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etGroupNameGroupFiles" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layoutSortGroupFiles"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/topNormalMargin"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtTempGroupImageGroupFiles"
+        >
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtTempSortGroupFiles"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/larsseit_bold"
+        android:text="@string/sort"
+        android:textColor="@color/darkLiteGrey"
+        android:textSize="@dimen/smallTextSize"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+  <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtSortGroupFiles"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/larsseit_medium"
+      android:layout_marginStart="@dimen/_3sdp"
+        android:text="@string/most_relevant"
+        android:textColor="@color/darkGrey"
+        android:textSize="@dimen/smallTextSize"
+        app:layout_constraintBottom_toBottomOf="@id/txtTempSortGroupFiles"
+        app:layout_constraintStart_toEndOf="@id/txtTempSortGroupFiles"
+        app:layout_constraintTop_toTopOf="@+id/txtTempSortGroupFiles" />
+  <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imgSortArrowGroupFiles"
+        android:layout_width="@dimen/_15sdp"
+        android:layout_height="@dimen/_13sdp"
+      android:layout_marginStart="@dimen/topFiveMargin"
+      android:src="@drawable/ic_baseline_keyboard_arrow_down_24"
+        app:layout_constraintBottom_toBottomOf="@id/txtTempSortGroupFiles"
+        app:layout_constraintStart_toEndOf="@id/txtSortGroupFiles"
+        app:layout_constraintTop_toTopOf="@+id/txtTempSortGroupFiles" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/startMainMargin"
+
+        app:layout_constraintStart_toEndOf="@id/layoutSortGroupFiles"
+        app:layout_constraintTop_toTopOf="@+id/layoutSortGroupFiles" >
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imgCalenderGroupFiles"
+        android:layout_width="@dimen/_15sdp"
+        android:layout_height="@dimen/_13sdp"
+      android:src="@drawable/calendar_month"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtTempDateGroupFiles"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/larsseit_medium"
+        android:text="@string/date"
+        android:layout_marginStart="@dimen/topFiveMargin"
+        android:textColor="@color/darkGrey"
+        android:textSize="@dimen/smallTextSize"
+        app:layout_constraintBottom_toBottomOf="@id/imgCalenderGroupFiles"
+        app:layout_constraintStart_toEndOf="@id/imgCalenderGroupFiles"
+        app:layout_constraintTop_toTopOf="@+id/imgCalenderGroupFiles" />
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imgDateArrowGroupFiles"
+        android:layout_width="@dimen/_15sdp"
+        android:layout_height="@dimen/_13sdp"
+        android:layout_marginStart="@dimen/topFiveMargin"
+        android:src="@drawable/ic_baseline_keyboard_arrow_down_24"
+        app:layout_constraintBottom_toBottomOf="@id/txtTempDateGroupFiles"
+        app:layout_constraintStart_toEndOf="@id/txtTempDateGroupFiles"
+        app:layout_constraintTop_toTopOf="@+id/txtTempDateGroupFiles" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvFileGroupFiles"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        tools:listitem="@layout/rv_group_files_list"
+        tools:itemCount="4"
+        android:layout_marginTop="@dimen/topFifteenMargin"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintTop_toBottomOf="@+id/layoutSortGroupFiles"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</layout>

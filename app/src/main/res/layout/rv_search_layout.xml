@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtTempTitleRvSearchLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/files"
+        android:fontFamily="@font/larsseit_regular"
+        android:visibility="gone"
+        android:textColor="@color/darkLiteGrey"
+        android:textSize="@dimen/normalTextSize"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtViewAllTitleRvSearchLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/cancel_txt"
+        android:visibility="gone"
+        android:fontFamily="@font/larsseit_regular"
+        android:textColor="@color/blueColor"
+        android:textSize="@dimen/smallTextSize"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layoutPViewRvSearchLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtTempTitleRvSearchLayout">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layoutFileNameRvSearchLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_marginTop="@dimen/_4sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layoutIconRvSearchLayout"
+                android:layout_width="@dimen/fortyFourIconSize"
+                android:layout_height="@dimen/fortyFourIconSize"
+                android:layout_marginTop="@dimen/_4sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                >
+
+                <com.yapi.common.RoundRectCornerImageView
+                    android:id="@+id/imgImageRvSearchLayout"
+                    android:layout_width="@dimen/fortyFourIconSize"
+                    android:layout_height="@dimen/fortyFourIconSize"
+                    android:src="@drawable/demo_photo"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/imgImageDrawableRvSearchLayout"
+                    android:layout_width="@dimen/iconSize"
+                    android:layout_height="@dimen/iconSize"
+                    android:clipToOutline="true"
+                    android:src="@drawable/image_drawable"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:visibility="gone"
+                    app:layout_constraintTop_toTopOf="parent" />
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txtFirstCharacterRvSearchLayout"
+                    android:text="A"
+                    android:gravity="center"
+                    android:textColor="@color/darkLiteGrey"
+                    android:background="@drawable/rounded_background"
+                    android:layout_width="@dimen/fortyFourIconSize"
+                    android:fontFamily="@font/larsseit_bold"
+                    android:visibility="gone"
+                    android:layout_height="@dimen/fortyFourIconSize"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtTitleRvSearchLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="hi xsdfsdgfd"
+                android:fontFamily="@font/larsseit_medium"
+                android:textSize="@dimen/normalTextSize"
+                android:textColor="@color/darkGrey"
+                android:singleLine="true"
+                app:layout_constraintEnd_toStartOf="@id/txtSubTitleRvSearchLayout"
+                android:layout_marginStart="@dimen/topNormalMargin"
+                app:layout_constraintStart_toEndOf="@id/layoutIconRvSearchLayout"
+                app:layout_constraintTop_toTopOf="@id/layoutIconRvSearchLayout"
+                app:layout_constraintBottom_toBottomOf="@id/layoutIconRvSearchLayout"
+                />
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtSubTitleRvSearchLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/about_yourself"
+                android:fontFamily="@font/larsseit_medium"
+                android:textSize="@dimen/normalSmallTextSize"
+                android:singleLine="true"
+                android:textColor="@color/darkLiteGrey"
+                android:layout_marginStart="@dimen/topNormalMargin"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/layoutIconRvSearchLayout"
+                app:layout_constraintBottom_toBottomOf="@id/layoutIconRvSearchLayout"
+                />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layoutMessageRvSearchLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/round_lite_gray"
+            android:clipToOutline="true"
+            android:visibility="gone"
+            android:padding="@dimen/topFiveMargin"
+            android:layout_marginTop="@dimen/topMargin"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            >
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imgGroupIconRvSearchLayout"
+                android:layout_width="@dimen/iconSize"
+                android:layout_height="@dimen/iconSize"
+                android:src="@drawable/group_icon"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                />
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtGroupNameRvSearchLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Human Resource"
+                android:layout_marginStart="@dimen/topFiveMargin"
+                android:fontFamily="@font/larsseit_medium"
+                android:textColor="@color/medium_grey_color"
+                android:textSize="@dimen/normalTextSize"
+                app:layout_constraintTop_toTopOf="@id/imgGroupIconRvSearchLayout"
+                app:layout_constraintBottom_toBottomOf="@id/imgGroupIconRvSearchLayout"
+                app:layout_constraintStart_toEndOf="@+id/imgGroupIconRvSearchLayout"
+                />
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtGroupTimeRvSearchLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="January 13, 2023"
+                android:fontFamily="@font/larsseit_regular"
+                android:textColor="@color/medium_grey_color"
+                android:textSize="@dimen/smallTextSize"
+                app:layout_constraintTop_toTopOf="@id/imgGroupIconRvSearchLayout"
+                app:layout_constraintBottom_toBottomOf="@id/imgGroupIconRvSearchLayout"
+                app:layout_constraintEnd_toEndOf="parent"
+                />
+
+
+            <com.yapi.common.ChatRoundRectCornerImageView
+                android:id="@+id/imgUserImageRvSearchLayout"
+                android:layout_width="@dimen/_35sdp"
+                android:layout_height="@dimen/_35sdp"
+                android:src="@drawable/temp_boy_photo"
+                android:layout_marginTop="@dimen/_30sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/imgGroupIconRvSearchLayout" />
+
+            <LinearLayout
+                android:id="@+id/cardTextRvSearchLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/imgUserImageRvSearchLayout"
+                app:layout_constraintTop_toTopOf="@id/imgUserImageRvSearchLayout">
+
+                <RelativeLayout
+                    android:id="@+id/cardViewTextMessageRvSearchLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_6sdp"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:background="@drawable/chat_left_box_back"
+                    app:cardElevation="@dimen/_2sdp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txtMessageRvSearchLayout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:backgroundTint="#ffffff"
+                        android:fontFamily="@font/larsseit_medium"
+                        android:letterSpacing="0.07"
+                        android:lineSpacingExtra="@dimen/line_spacing_extra"
+                        android:paddingStart="@dimen/_10sdp"
+                        android:paddingTop="@dimen/_5sdp"
+                        android:paddingEnd="@dimen/_10sdp"
+                        android:paddingBottom="@dimen/_5sdp"
+                        android:text="Hi Everyone, Nibh ipsum consequat nisl vel pretium lectus quam id leo"
+                        android:textColor="@color/darkGrey"
+                        android:textSize="@dimen/normalSmallTextSize" />
+
+                </RelativeLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/linearUserDetailRvSearchLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_6sdp"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toTopOf="@id/cardTextRvSearchLayout"
+                app:layout_constraintStart_toStartOf="@id/cardTextRvSearchLayout">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txtUserNameRvSearchLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+
+                    android:fontFamily="@font/larsseit_medium"
+                    android:letterSpacing="0.07"
+                    android:lineSpacingExtra="@dimen/line_spacing_extra"
+                    android:text="Kaylynn"
+                    android:textAllCaps="true"
+                    android:textColor="@color/medium_grey_color"
+                    android:textSize="@dimen/smallTextSize"
+                    app:layout_constraintStart_toEndOf="@id/ivLeftUserPhoto"
+                    app:layout_constraintTop_toTopOf="@id/ivLeftUserPhoto" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/_4sdp"
+                    android:layout_height="@dimen/_4sdp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    app:tint="#E6E6E6"
+                    android:src="@drawable/circle_bullet" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txtMessageTimeRvSearchLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="@dimen/_8sdp"
+
+                    android:fontFamily="@font/larsseit_medium"
+                    android:letterSpacing="0.07"
+                    android:lineSpacingExtra="@dimen/line_spacing_extra"
+                    android:text="12:00"
+                    android:textColor="@color/medium_grey_color"
+                    android:textSize="@dimen/smallTextSize"
+                    app:layout_constraintStart_toEndOf="@id/ivLeftUserPhoto"
+                    app:layout_constraintTop_toTopOf="@id/ivLeftUserPhoto" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/_4sdp"
+                    android:layout_height="@dimen/_4sdp"
+                    android:layout_gravity="center_vertical"
+                    app:tint="#E6E6E6"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:src="@drawable/circle_bullet" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/imgEmojiIconRvSearchLayout"
+                    android:layout_width="@dimen/iconSize"
+                    android:layout_height="@dimen/iconSize"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:src="@drawable/add_reaction_left" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/imgMoreChatRvSearchLayout"
+                    android:layout_width="@dimen/iconSize"
+                    android:layout_height="@dimen/iconSize"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:rotation="90"
+                    app:tint="#B8B8B8"
+
+                    android:src="@drawable/chat_more_icon" />
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <View
+        android:id="@+id/viewLineRvSearchLayout"
+        android:layout_height="@dimen/_1sdp"
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/topNormalMargin"
+        android:visibility="gone"
+        android:background="@color/liteGrey"
+        android:layout_marginBottom="@dimen/topFiveMargin"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layoutPViewRvSearchLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>

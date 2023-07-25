@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardviewAddLink"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:elevation="@dimen/_5sdp"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="@dimen/cardview_popup_back_radius"
+            app:cardElevation="@dimen/_5sdp"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:paddingStart="@dimen/startMainMargin"
+            android:paddingBottom="@dimen/_13sdp"
+            android:paddingTop="@dimen/_10sdp"
+            android:paddingEnd="@dimen/startMainMargin"
+            android:layout_height="wrap_content">
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvAddLinkText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/larsseit_medium"
+                android:letterSpacing="@dimen/text_letter_spacing"
+                android:lineSpacingExtra="@dimen/line_spacing_extra"
+                android:text="@string/add_link_text"
+                android:textColor="@color/darkGrey"
+                android:textSize="@dimen/normalTextSize"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/tvTextDisplay"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:drawablePadding="@dimen/_8sdp"
+                android:fontFamily="@font/larsseit_regular"
+                android:letterSpacing="@dimen/text_letter_spacing"
+                android:lineSpacingExtra="@dimen/line_spacing_extra"
+                android:hint="@string/text_to_display"
+                android:background="@drawable/et_drawable"
+                android:padding="@dimen/_10sdp"
+                android:singleLine="true"
+                android:textColorHint="@color/medium_grey_color"
+                android:drawableStart="@drawable/text_display_add_link"
+                android:textColor="@color/darkGrey"
+                android:textSize="@dimen/normalTextSize"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvAddLinkText" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/tvTextPasteLink"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:drawablePadding="@dimen/_8sdp"
+                android:fontFamily="@font/larsseit_regular"
+                android:letterSpacing="@dimen/text_letter_spacing"
+                android:lineSpacingExtra="@dimen/line_spacing_extra"
+                android:hint="@string/paste_link"
+                android:background="@drawable/et_drawable"
+                android:padding="@dimen/_10sdp"
+                android:textColorHint="@color/medium_grey_color"
+                android:drawableStart="@drawable/text_display_add_link"
+                android:textColor="@color/darkGrey"
+                android:singleLine="true"
+                android:textSize="@dimen/normalTextSize"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvTextDisplay" />
+
+            <LinearLayout
+                android:id="@+id/bottomConstarintsAddLink"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginBottom="@dimen/_20sdp"
+                android:weightSum="2"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@+id/tvTextPasteLink">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnCancelAddLink"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.85"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:background="@drawable/rounded_background"
+                    android:backgroundTint="@color/liteGrey"
+                    android:fontFamily="@font/larsseit_bold"
+                    android:paddingStart="@dimen/etHorizontalPadding"
+                    android:paddingTop="@dimen/etVerticalPadding"
+                    android:paddingEnd="@dimen/etHorizontalPadding"
+                    android:letterSpacing="@dimen/text_letter_spacing"
+                    android:lineSpacingExtra="@dimen/line_spacing_extra"
+
+                    android:paddingBottom="@dimen/etVerticalPadding"
+                    android:stateListAnimator="@null"
+                    android:text="@string/cancel_txt"
+                    android:textAllCaps="true"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/normalTextSize"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/btnDelGroup"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintHorizontal_chainStyle="spread"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnAddLinkSave"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.85"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:background="@drawable/rounded_background"
+                    android:backgroundTint="@color/blueColor"
+                    android:fontFamily="@font/larsseit_bold"
+                    android:paddingStart="@dimen/etHorizontalPadding"
+                    android:paddingTop="@dimen/etVerticalPadding"
+                    android:paddingEnd="@dimen/etHorizontalPadding"
+                    android:paddingBottom="@dimen/etVerticalPadding"
+                    android:stateListAnimator="@null"
+                    android:text="@string/save_text"
+                    android:letterSpacing="@dimen/text_letter_spacing"
+                    android:lineSpacingExtra="@dimen/line_spacing_extra"
+
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/normalTextSize"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/btnCancelInvite" />
+
+            </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView></androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

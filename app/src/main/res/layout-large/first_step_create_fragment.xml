@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="vModel"
+            type="com.yapi.views.create_team.first_step_create_team.FirstStepViewModel" />
+
+    </data>
+
+    <LinearLayout
+        android:id="@+id/linearTopFirstStep"
+        android:onClick="@{vModel::onClick}"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/screen_background"
+        android:orientation="vertical"
+        android:weightSum="100">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="35">
+
+            <ImageView
+                android:layout_width="@dimen/signup_process_top_logo_width"
+                android:layout_height="@dimen/signup_process_top_logo_height"
+
+                android:layout_centerInParent="true"
+                android:src="@drawable/logo" />
+        </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+
+        android:orientation="horizontal"
+        android:layout_weight="65"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_horizontal"
+        android:weightSum="@dimen/signup_process_weight_sum"
+        >
+        <LinearLayout
+            android:layout_width="0dp"
+            android:orientation="vertical"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="@color/white"
+            android:layout_weight="@dimen/signup_process_weight">
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintsTopFirstStep"
+                    android:onClick="@{vModel::onClick}"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/_10sdp">
+
+                    <TextView
+                        android:id="@+id/tvFirstStepSize"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_25sdp"
+                        android:fontFamily="@font/larsseit_bold"
+                        android:text="@string/stemp_size"
+                        android:textAllCaps="true"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_12ssp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tvFirsTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:fontFamily="@font/larsseit_bold"
+                        android:gravity="center"
+                        android:letterSpacing="0.03"
+                        android:text="@string/company_name_title"
+                        android:textColor="@color/darkGrey"
+                        android:textSize="@dimen/mobileTitleTextSize"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tvFirstStepSize" />
+
+                    <TextView
+                        android:id="@+id/tvFirsDescription"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:fontFamily="@font/larsseit_regular"
+                        android:gravity="center"
+                        android:letterSpacing="0.07"
+                        android:lineSpacingExtra="@dimen/line_spacing_extra"
+                        android:text="@string/company_name_description"
+                        android:textColor="@color/darkLiteGrey"
+                        android:textSize="@dimen/_12ssp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tvFirsTitle" />
+
+                    <TextView
+                        android:id="@+id/tvteamField"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/startMainMargin"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:fontFamily="@font/larsseit_medium"
+                        android:gravity="center"
+                        android:text="@string/comany_name"
+                        android:textAllCaps="true"
+                        android:textColor="@color/darkGrey"
+                        android:textSize="@dimen/_11ssp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tvFirsDescription" />
+
+                    <TextView
+                        android:id="@+id/tvteamFieldCont"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:layout_marginEnd="@dimen/startMainMargin"
+                        android:fontFamily="@font/larsseit_medium"
+                        android:gravity="center"
+                        android:text="@{vModel.nameCountValue}"
+                        android:textAllCaps="true"
+                        android:textColor="@color/darkLiteGrey"
+                        android:textSize="@dimen/_11ssp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tvFirsDescription" />
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/etTeamName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/startMainMargin"
+                        android:layout_marginTop="@dimen/_2sdp"
+                        android:layout_marginEnd="@dimen/startMainMargin"
+                        android:background="@drawable/et_drawable"
+                        android:fontFamily="@font/larsseit_regular"
+                        android:hint="Enter team or company name"
+                        android:maxLength="50"
+                        android:onTextChanged="@{vModel.onTextChanged}"
+                        android:paddingStart="@dimen/etHorizontalPadding"
+                        android:paddingTop="@dimen/etVerticalPadding"
+                        android:paddingEnd="@dimen/etHorizontalPadding"
+                        android:paddingBottom="@dimen/etVerticalPadding"
+                        android:text="@={vModel.teamName}"
+                        android:textSize="@dimen/normalTextSize"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tvteamField" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txtErrorFirstStep"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/larsseit_regular"
+                        android:text=""
+                        android:layout_marginStart="@dimen/error_margin_start"
+                        android:textColor="@color/red"
+                        android:textSize="@dimen/smallTextSize"
+                        android:visibility="visible"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/etTeamName"
+                        app:layout_constraintTop_toBottomOf="@+id/etTeamName" />
+
+
+                    <androidx.appcompat.widget.AppCompatCheckBox
+                        android:id="@+id/firstTeamCheck"
+                        android:layout_width="@dimen/checkbox_size"
+                        android:layout_height="@dimen/checkbox_size"
+                        android:layout_marginStart="@dimen/startMainMargin"
+                        android:layout_marginTop="@dimen/_12sdp"
+                        android:button="@drawable/create_team_checkbox"
+                        android:checked="@={vModel.checkBoxValue}"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/txtErrorFirstStep" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvCheckBoxName"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:paddingBottom="@dimen/_20sdp"
+                        android:layout_marginEnd="@dimen/startMainMargin"
+                        android:lineSpacingExtra="@dimen/line_spacing_extra"
+                        android:text="@string/create_team_checkbox_text"
+                        android:textColor="#8F8F8F"
+                        android:textSize="@dimen/_12ssp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/firstTeamCheck"
+                        app:layout_constraintTop_toBottomOf="@+id/txtErrorFirstStep" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.core.widget.NestedScrollView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/bottomMarggin"
+                android:orientation="vertical"
+                android:layout_gravity="bottom"
+                android:gravity="bottom"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+               >
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnFirstCreateTeam"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_marginStart="@dimen/startMainMargin"
+                    android:layout_marginEnd="@dimen/startMainMargin"
+
+                    android:background="@drawable/rounded_background"
+                    android:backgroundTint="@color/blueColor"
+                    android:fontFamily="@font/larsseit_bold"
+                    android:onClick="@{vModel::onClick}"
+                    android:text="@string/next"
+                    android:textSize="@dimen/normalTextSize"
+
+                    android:paddingStart="@dimen/etHorizontalPadding"
+                    android:paddingTop="@dimen/etVerticalPadding"
+                    android:paddingEnd="@dimen/etHorizontalPadding"
+                    android:paddingBottom="@dimen/etVerticalPadding"
+                    android:textColor="@color/white"
+                    app:layout_constraintBottom_toBottomOf="parent" />
+            </LinearLayout>
+        </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</layout>

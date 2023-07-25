@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="@dimen/_5sdp"
+    android:paddingBottom="@dimen/_4sdp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layoutImgRvGroupFiles"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/round_lite_gray"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="@dimen/iconSize"
+            android:layout_height="@dimen/iconSize"
+            android:layout_margin="@dimen/_8sdp"
+            android:src="@drawable/file"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    />
+<LinearLayout
+    android:id="@+id/linearTitle"
+    android:layout_width="0dp"
+    android:orientation="horizontal"
+    app:layout_constraintEnd_toStartOf="@+id/imgEditRvGroupFiles"
+    app:layout_constraintStart_toEndOf="@id/layoutImgRvGroupFiles"
+    app:layout_constraintTop_toTopOf="@id/layoutImgRvGroupFiles"
+    android:layout_height="wrap_content">
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtFileNameRvGroupFiles"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/topFiveMargin"
+        android:fontFamily="@font/larsseit_medium"
+        android:textColor="@color/darkGrey"
+        android:layout_alignParentStart="true"
+        android:text="TechRequirements.pd"
+        android:textSize="@dimen/normalTextSize" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtFileSizeRvGroupFiles"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_2sdp"
+        android:fontFamily="@font/larsseit_medium"
+        android:text="0.4mb"
+        android:minWidth="50dp"
+        android:textColor="@color/darkLiteGrey"
+        android:textSize="@dimen/smallTextSize"
+        android:layout_alignParentRight="true"
+        app:layout_constraintBottom_toBottomOf="@id/txtFileNameRvGroupFiles"
+        app:layout_constraintStart_toEndOf="@id/txtFileNameRvGroupFiles"
+        app:layout_constraintTop_toTopOf="@id/txtFileNameRvGroupFiles" />
+</LinearLayout>
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtFileInfoRvGroupFiles"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/topFiveMargin"
+        android:maxLines="2"
+        android:fontFamily="@font/larsseit_regular"
+        android:text="Shared by Yadira Redmond on Feb 20"
+        android:textColor="@color/darkLiteGrey"
+        android:textSize="@dimen/smallTextSize"
+        app:layout_constraintEnd_toStartOf="@id/imgEditRvGroupFiles"
+        app:layout_constraintStart_toEndOf="@id/layoutImgRvGroupFiles"
+        app:layout_constraintTop_toBottomOf="@id/linearTitle" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imgEditRvGroupFiles"
+        android:layout_width="@dimen/extraIconSize"
+        android:layout_height="@dimen/extraIconSize"
+        android:layout_margin="@dimen/_8sdp"
+        android:src="@drawable/chat_more_icon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+<data>
+    <variable
+        name="model"
+        type="com.yapi.views.chat.chatUserInfo.ChatUserInfoViewModel" />
+
+</data>
+<androidx.cardview.widget.CardView
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    android:layout_width="match_parent"
+    android:layout_marginTop="@dimen/_5sdp"
+    android:layout_marginBottom="@dimen/_5sdp"
+    app:cardBackgroundColor="@color/information_profile_back_box"
+    app:cardCornerRadius="@dimen/_5sdp"
+    app:cardElevation="0dp"
+    android:elevation="0dp"
+    android:layout_height="wrap_content"
+    >
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:paddingEnd="@dimen/startMainMargin"
+    android:paddingTop="@dimen/_5sdp"
+    android:paddingBottom="@dimen/startMainMargin"
+    android:paddingStart="@dimen/startMainMargin"
+    android:layout_height="wrap_content">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvName"
+        android:text="@string/hello_text"
+        android:fontFamily="@font/larsseit_medium"
+        android:textSize="@dimen/smallTextSize"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:letterSpacing="@dimen/text_letter_spacing"
+        android:lineSpacingExtra="@dimen/line_spacing_extra"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivMoreIcon"
+        android:src="@drawable/chat_more_icon"
+        android:layout_width="@dimen/iconSize"
+        android:rotation="90"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_height="@dimen/iconSize"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvTemplateDescription"
+        android:text="Thank you for contacting us. Our staff will contact with you within 3-4 hours."
+        android:fontFamily="@font/larsseit_medium"
+        android:textSize="@dimen/smallTextSize"
+        android:letterSpacing="@dimen/text_letter_spacing"
+        android:lineSpacingExtra="@dimen/line_spacing_extra"
+
+        app:layout_constraintTop_toBottomOf="@id/tvName"
+        android:textColor="@color/darkGrey"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
+</layout>

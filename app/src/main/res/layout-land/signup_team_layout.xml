@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="model"
+            type="com.yapi.views.signupTeam.SignupViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:weightSum="100"
+        android:orientation="vertical"
+        android:background="@drawable/screen_background"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="35">
+            <ImageView
+                android:background="@drawable/logo"
+                android:layout_centerInParent="true"
+                android:layout_width="@dimen/signup_process_top_logo_width"
+                android:layout_height="@dimen/signup_process_top_logo_height"/>
+        </RelativeLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+
+            android:orientation="horizontal"
+            android:layout_weight="65"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal"
+            android:weightSum="@dimen/signup_process_weight_sum"
+            >
+            <LinearLayout
+                android:layout_width="0dp"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@color/white"
+                android:weightSum="2"
+                android:layout_weight="@dimen/signup_process_weight">
+                <androidx.core.widget.NestedScrollView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/signupLogo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_20sdp"
+                            android:src="@drawable/signup_logo"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/tvSignupTitle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:gravity="center_horizontal"
+                            android:text="@string/create_workspace"
+                            android:fontFamily="@font/larsseit_bold"
+                            android:textColor="@color/darkGrey"
+                            android:textSize="@dimen/_18ssp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/signupLogo" />
+
+                        <TextView
+                            android:id="@+id/tvSignupDescription"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:gravity="center_horizontal"
+                            android:text="@string/signup_description"
+                            android:textColor="@color/darkLiteGrey"
+                            android:textSize="@dimen/_12ssp"
+                            android:letterSpacing="0.07"
+                            android:lineSpacingExtra="@dimen/line_spacing_extra"
+                            android:fontFamily="@font/larsseit_regular"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/tvSignupTitle" />
+
+                        <LinearLayout
+                            android:id="@+id/craeteTeamBtn"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:onClick="@{model::onClick}"
+                            android:layout_marginStart="@dimen/_15sdp"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:layout_marginEnd="@dimen/_15sdp"
+                            android:background="@drawable/rounded_background"
+                            android:backgroundTint="@color/blueColor"
+
+                            android:gravity="center"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/tvSignupDescription">
+
+                            <TextView
+                                android:id="@+id/tvButton"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/create_team"
+                                android:textAllCaps="true"
+                                android:textSize="@dimen/normalTextSize"
+                                android:paddingStart="@dimen/etHorizontalPadding"
+                                android:paddingTop="@dimen/etVerticalPadding"
+                                android:paddingEnd="@dimen/etHorizontalPadding"
+                                android:paddingBottom="@dimen/etVerticalPadding"
+                                android:textColor="@color/white"
+                                android:fontFamily="@font/larsseit_bold"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent" />
+
+                            <ImageView
+                                android:id="@+id/imageView"
+                                android:layout_width="@dimen/iconSize"
+                                android:layout_height="@dimen/iconSize"
+                                android:layout_marginStart="@dimen/_2sdp"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                android:src="@drawable/arrow_forward"
+                                app:layout_constraintStart_toEndOf="@+id/tvButton" />
+                        </LinearLayout>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.core.widget.NestedScrollView>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center_vertical"
+                    android:weightSum="2"
+                    android:layout_height="wrap_content">
+
+                    <View
+                        android:id="@+id/viewFirstOR"
+                        android:layout_width="@dimen/_1sdp"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:background="@color/liteGrey"
+                        android:layout_marginStart="@dimen/_15sdp"
+                        android:layout_weight="1"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/tvORText"
+                        app:layout_constraintTop_toTopOf="@+id/tvORText"
+                        app:layout_constraintBottom_toBottomOf="@+id/tvORText"
+                        android:layout_height="0dp"/>
+                    <TextView
+                        android:id="@+id/tvORText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="OR"
+                        android:textSize="@dimen/_12ssp"
+                        android:fontFamily="@font/larsseit_bold"
+                        android:textColor="@color/darkLiteGrey"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/craeteTeamBtn" />
+
+
+
+                    <View
+                        android:id="@+id/viewSecondOR"
+                        android:layout_width="@dimen/_1sdp"
+                        android:background="@color/liteGrey"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:layout_marginEnd="@dimen/_15sdp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/tvORText"
+                        app:layout_constraintTop_toTopOf="@+id/tvORText"
+                        android:layout_weight="1"
+                        app:layout_constraintBottom_toBottomOf="@+id/tvORText"
+                        android:layout_height="0dp"/>
+
+
+
+                </LinearLayout>
+
+
+
+                <androidx.core.widget.NestedScrollView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:orientation="vertical"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:id="@+id/tvacceptInvitationTxt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:text="@string/accept_invitation"
+                            android:textColor="@color/darkGrey"
+                            android:textSize="@dimen/_18ssp"
+                            android:fontFamily="@font/larsseit_bold"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/tvORText" />
+
+                        <TextView
+                            android:id="@+id/tvinvitaionIDS"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:gravity="center_horizontal"
+                            android:textColor="@color/darkLiteGrey"
+                            android:textSize="@dimen/_12ssp"
+                            android:letterSpacing="0.07"
+                            android:text="@{model.loginEmailMessage}"
+                            android:lineSpacingExtra="@dimen/line_spacing_extra"
+                            android:fontFamily="@font/larsseit_regular"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/tvacceptInvitationTxt" />
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rvUsers"
+                            android:layout_width="match_parent"
+                            android:layout_marginTop="@dimen/_6sdp"
+                            app:layout_constraintTop_toBottomOf="@+id/tvinvitaionIDS"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                </androidx.core.widget.NestedScrollView>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</layout>

@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_graph"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/signUpFragment2"
+        android:name="com.yapi.views.signup.SignUpFragment"
+        android:label="SignUpFragment">
+        <action
+            android:id="@+id/action_signUpFragment2_to_signUpCodeFragment"
+            app:destination="@id/signUpCodeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/signupTeam"
+        android:name="com.yapi.views.signupTeam.SignUpTeamFragment"
+        android:label="SignupTeamFragment">
+        <action
+            android:id="@+id/action_signupTeam_to_firstStepCreateTeam"
+            app:destination="@id/firstStepCreateTeam" />
+    </fragment>
+    <fragment
+        android:id="@+id/signUpCodeFragment"
+        android:name="com.yapi.views.signup_code.SignUpCodeFragment"
+        android:label="SignUpCodeFragment">
+        <action
+            android:id="@+id/action_signUpCodeFragment_to_signupTeam"
+            app:destination="@id/signupTeam" />
+
+        <action android:id="@+id/action_signUpCodeFragment_to_menuFragment"
+            app:destination="@id/menuFragment"/>
+    </fragment>
+    <fragment
+        android:id="@+id/signInFragment"
+        android:name="com.yapi.views.sign_in.SignInFragment"
+        android:label="SignInFragment">
+        <action
+            android:id="@+id/action_signInFragment_to_signUpCodeFragment"
+            app:destination="@id/signUpCodeFragment" />
+        <action
+            android:id="@+id/action_signInFragment_to_signUpFragment2"
+            app:destination="@id/signUpFragment2" />
+        <action
+            android:id="@+id/action_signInFragment_to_chatEmptyFragment"
+            app:destination="@id/chatEmptyFragment" />
+        <action
+            android:id="@+id/action_signInFragment_to_chipSetDemoFragment"
+            app:destination="@id/chipSetDemoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/menuFragment"
+        android:name="com.yapi.views.menu_screen.MenuFragment"
+        android:label="MenuFragment">
+        <action
+            android:id="@+id/action_menuFragment_to_createGroupFragment"
+            app:destination="@id/createGroupFragment" />
+        <action
+            android:id="@+id/action_menuFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_menuFragment_to_chatMessageFragment"
+            app:destination="@id/chatMessageFragment" />
+
+        <action android:id="@+id/action_menuFragment_to_signInFragment"
+            app:destination="@id/signInFragment"
+            app:popUpToInclusive="true"/>
+
+        <action android:id="@+id/action_menuFragment_to_searchFragment"
+            app:destination="@id/searchFragment"/>
+
+        <action android:id="@+id/action_menuFragment_to_userListFragment"
+            app:destination="@id/UserListFragment"/>
+
+        <action android:id="@+id/action_menuFragment_to_workspacelist"
+            app:destination="@id/workspacelist"/>
+
+        <action android:id="@+id/action_menuFragment_to_savedItemsFragment"
+           app:destination="@id/savedItemsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/workspacelist"
+android:name="com.yapi.views.workspaces.workspacesList.WorkSpacesListFragment"
+        android:label="workspaceList"
+        >
+        <action android:id="@+id/action_workspaceList_to_openWorkspace"
+            app:destination="@id/openWorkspace"/>
+
+    </fragment>
+
+    <fragment android:id="@+id/openWorkspace"
+        android:name="com.yapi.views.workspaces.openWorkspace.OpenWorkspaceFragment"
+        android:label="openWorkspace"></fragment>
+
+    <fragment
+        android:id="@+id/UserListFragment"
+        android:label="userListFragment"
+        android:name="com.yapi.views.userList.UserListFragment"/>
+    <fragment
+        android:id="@+id/firstStepCreateTeam"
+        android:name="com.yapi.views.create_team.first_step_create_team.FirstStepCreateFragment"
+        android:label="FirstStepCreateTeam">
+        <action
+            android:id="@+id/action_firstStepCreateTeam_to_secondStepCreateTeam"
+            app:destination="@id/secondStepCreateTeam" />
+    </fragment>
+    <fragment
+        android:id="@+id/secondStepCreateTeam"
+        android:name="com.yapi.views.create_team.second_step_create_team.SecondStepCreateFragment"
+        android:label="SecondStepCreateTeam">
+        <action
+            android:id="@+id/action_secondStepCreateTeam_to_thirdStepCreateTeam"
+            app:destination="@+id/thirdStepCreateTeam" />
+    </fragment>
+    <fragment
+        android:id="@+id/thirdStepCreateTeam"
+        android:name="com.yapi.views.create_team.third_step_create_team.ThirdStepCreateFragment"
+        android:label="ThirdStepCreateTeam">
+        <action android:id="@+id/action_thirdStepCreateTeam_to_addPeopleFragment"
+            app:destination="@+id/addPeopleFragment"/>
+        <action
+            android:id="@+id/action_thirdStepCreateTeam_to_chatEmptyFragment"
+            app:destination="@id/chatEmptyFragment" />
+        <action
+            android:id="@+id/action_thirdStepCreateTeam_to_menuFragment"
+            app:destination="@id/menuFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/chatEmptyFragment"
+        android:name="com.yapi.views.chat_empty.ChatEmptyFragment"
+        android:label="ChatEmptyFragment">
+        <action
+            android:id="@+id/action_chatEmptyFragment_to_menuFragment"
+            app:destination="@id/menuFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/leaveGroupFragment"
+        android:name="com.yapi.views.leaveGroup.LeaveGroupFragment"
+        android:label="Leave Group" />
+
+    <fragment
+        android:id="@+id/deleteGroupFragment"
+        android:name="com.yapi.views.deleteGroup.DeleteGroupFragment"
+        android:label="Delete Group" />
+    <fragment
+        android:id="@+id/createGroupFragment"
+        android:name="com.yapi.views.create_group.CreateGroupFragment"
+        android:label="CreateGroupFragment">
+        <action
+            android:id="@+id/action_createGroupFragment_to_addPeopleFragment"
+            app:destination="@id/addPeopleFragment"
+            app:popUpTo="@id/menuFragment"/>
+    </fragment>
+    <fragment
+        android:id="@+id/addPeopleFragment"
+        android:name="com.yapi.views.add_people.AddPeopleFragment"
+        android:label="AddPeopleFragment">
+        <action
+            android:id="@+id/action_addPeopleFragment_to_addPeopleEmailFragment"
+            app:destination="@id/addPeopleEmailFragment"
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.yapi.views.profile.ProfileFragment"
+        android:label="ProfileFragment">
+        <action
+            android:id="@+id/action_profileFragment_to_editProfileFragment"
+            app:destination="@id/editProfileFragment" />
+        <action android:id="@+id/action_profileFragment_to_signInFragment"
+            app:destination="@id/signInFragment"
+            app:popUpToInclusive="true"/>
+    </fragment>
+    <fragment
+        android:id="@+id/editProfileFragment"
+        android:name="com.yapi.views.edit_profile.EditProfileFragment"
+        android:label="EditProfileFragment" />
+    <fragment
+        android:id="@+id/chipSetDemoFragment"
+        android:name="com.yapi.views.chipset_demo.ChipSetDemoFragment"
+        android:label="ChipSetDemoFragment" />
+    <fragment
+        android:id="@+id/addPeopleEmailFragment"
+        android:name="com.yapi.views.add_people_email.AddPeopleEmailFragment"
+        android:label="AddPeopleEmailFragment">
+        <action
+            android:id="@+id/action_addPeopleEmailFragment_to_addPeopleEmailConfirmationFragment"
+            app:destination="@id/addPeopleEmailConfirmationFragment"
+            app:popUpTo="@id/menuFragment"/>
+    </fragment>
+    <fragment
+        android:id="@+id/addPeopleEmailConfirmationFragment"
+        android:name="com.yapi.views.add_people_email_confirmation.AddPeopleEmailConfirmationFragment"
+        android:label="AddPeopleEmailConfirmationFragment" />
+
+    <fragment
+        android:id="@+id/chatMessageFragment"
+        android:name="com.yapi.views.chat.ChatMessagesFragment"
+        android:label="ChatMessageFragment">
+        <action
+            android:id="@+id/action_chatMessageFragment_to_chatUserProfileInfo"
+            app:destination="@+id/chatUserProfileInfo" />
+
+        <action
+            android:id="@+id/action_chatMessageFragment_to_chatGroupProfileInfo"
+            app:destination="@+id/chatGroupProfileInfo" />
+    </fragment>
+    <fragment
+        android:id="@+id/chatUserProfileInfo"
+        android:name="com.yapi.views.chat.chatUserInfo.ChatUserInfoFragment"
+        tools:layout="ChatUserInfoFragment"></fragment>
+
+    <fragment
+        android:id="@+id/chatGroupProfileInfo"
+        android:name="com.yapi.views.chat.chatGroupInfo.ChatGroupInfoFragment"
+        tools:layout="chatGroupInfoFragment" >
+        <action
+            android:id="@+id/action_chatGroupProfileInfo_to_groupInfoFragment"
+            app:destination="@id/groupInfoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.yapi.views.splash.SplashFragment"
+        android:label="splashFragment">
+        <action
+            android:id="@+id/action_splashFragment_to_signInFragment"
+            app:destination="@+id/signInFragment"/>
+        <action android:id="@+id/action_splashFragment_to_menuFragment"
+            app:destination="@+id/menuFragment"/>
+
+        <action android:id="@+id/action_splashFragment_to_signupTeam"
+            app:destination="@+id/signupTeam"/>
+    </fragment>
+    <fragment
+        android:id="@+id/groupInfoFragment"
+        android:name="com.yapi.views.group_info.GroupInfoFragment"
+        android:label="GroupInfoFragment" />
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.yapi.views.search.SearchFragment"
+        android:label="SearchFragment" >
+        <action
+            android:id="@+id/action_searchFragment_to_searchResultFragment"
+            app:destination="@id/searchResultFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchResultFragment"
+        android:name="com.yapi.views.search_result.SearchResultFragment"
+        android:label="SearchResultFragment" />
+
+    <fragment android:id="@+id/savedItemsFragment"
+        android:name="com.yapi.views.savedItems.SavedItemsFragment"
+        android:label="savedItemsFragment"/>
+
+</navigation>

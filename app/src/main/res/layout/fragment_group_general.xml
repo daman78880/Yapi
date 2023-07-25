@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="model"
+            type="com.yapi.views.group_info.group_general.ViewModelGroupGeneral" />
+    </data>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingStart="@dimen/popSideMargin"
+    android:paddingEnd="@dimen/popSideMargin"
+    tools:context=".views.group_info.group_general.GroupGeneral">
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnDoneGroupGeneral"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_drawable_blue"
+        android:text="@={model.doneButtonText}"
+        android:backgroundTint="@color/darkBlueBtn"
+        android:layout_marginTop="@dimen/topNormalMargin"
+        android:padding="@dimen/etVerticalPadding"
+        android:textColor="@color/white"
+        android:fontFamily="@font/larsseit_bold"
+        android:textSize="@dimen/normalTextSize"
+        android:onClick="@{model::onClick}"
+        android:textAllCaps="true"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+    <include layout="@layout/fragment_group_general_info_edit"
+        app:layout_constraintTop_toBottomOf="@id/btnDoneGroupGeneral"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:id="@+id/includeGroupGnlInfoEdit"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <include layout="@layout/fragment_group_general_info"
+        app:layout_constraintTop_toBottomOf="@id/btnDoneGroupGeneral"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:id="@+id/includeGroupGnlInfo"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

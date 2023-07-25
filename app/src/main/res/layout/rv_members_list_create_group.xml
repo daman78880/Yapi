@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/topMargin"
+    >
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/imgProfilePicRvMemberListCreateGroup"
+        android:layout_width="@dimen/_35sdp"
+        android:layout_height="@dimen/_35sdp"
+        android:layout_alignParentEnd="true"
+        android:layout_gravity="end"
+        android:scaleType="centerCrop"
+        android:src="@drawable/demo_photo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:riv_corner_radius="8dp"
+        app:riv_mutate_background="true" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtUserNameRvMemberListCreateGroup"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/topMargin"
+        android:fontFamily="@font/larsseit_medium"
+        android:singleLine="true"
+        android:text="Yadira Redmond"
+        android:textColor="@color/darkGrey"
+        android:textSize="@dimen/normalTextSize"
+        app:layout_constraintEnd_toStartOf="@+id/layoutUserPositionRvMemberListCreateGroup"
+        app:layout_constraintStart_toEndOf="@+id/imgProfilePicRvMemberListCreateGroup"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtUserDesignationRvMemberListCreateGroup"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/larsseit_medium"
+        android:singleLine="true"
+        android:text="Technician"
+        android:textColor="@color/darkLiteGrey"
+        android:textSize="@dimen/normalSmallTextSize"
+        app:layout_constraintEnd_toStartOf="@+id/layoutUserPositionRvMemberListCreateGroup"
+        app:layout_constraintStart_toStartOf="@+id/txtUserNameRvMemberListCreateGroup"
+        app:layout_constraintTop_toBottomOf="@+id/txtUserNameRvMemberListCreateGroup" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layoutUserPositionRvMemberListCreateGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:background="@drawable/et_drawable"
+        android:paddingStart="@dimen/topFiveMargin"
+        android:paddingTop="@dimen/_2sdp"
+        android:paddingEnd="@dimen/topFiveMargin"
+        android:paddingBottom="@dimen/_2sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        >
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtUserPositionRvMenerListCreateGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/larsseit_medium"
+            android:text="Group Owner"
+            android:textColor="@color/blueColor"
+            android:textSize="@dimen/smallTextSize"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/imgDownArrowUserPositionRvMenerListCreateGroup"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imgDownArrowUserPositionRvMenerListCreateGroup"
+            android:layout_width="@dimen/iconSize"
+            android:layout_height="@dimen/iconSize"
+            android:src="@drawable/ic_baseline_keyboard_arrow_down_24"
+            app:layout_constraintStart_toEndOf="@+id/txtUserPositionRvMenerListCreateGroup"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

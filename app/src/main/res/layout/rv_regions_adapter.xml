@@ -1,0 +1,873 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:orientation="vertical"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/constarintsTopList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_3sdp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintsRegions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/_6sdp"
+            android:paddingTop="@dimen/_10sdp"
+            android:paddingEnd="@dimen/_6sdp"
+            android:paddingBottom="@dimen/_10sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/topConstraintsWork"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivPlusIconRegion"
+                    android:layout_width="@dimen/iconSize"
+                    android:layout_height="@dimen/iconSize"
+                    android:src="@drawable/add_user_button"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/linearRightSide"
+                    app:layout_constraintBottom_toBottomOf="@id/linearRightSide"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvRegionTitle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_6sdp"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:fontFamily="@font/larsseit_medium"
+                    android:letterSpacing="@dimen/text_letter_spacing"
+                    android:lineSpacingExtra="@dimen/line_spacing_extra"
+                    android:text="@string/region"
+                    android:textAllCaps="true"
+                    android:textColor="@color/darkLiteGrey"
+                    android:textSize="@dimen/smallTextSize"
+                    app:layout_constraintEnd_toStartOf="@+id/linearRightSide"
+                    app:layout_constraintStart_toEndOf="@+id/ivPlusIconRegion"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvRegionNameValue"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_6sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:fontFamily="@font/larsseit_medium"
+                    android:letterSpacing="@dimen/text_letter_spacing"
+                    android:lineSpacingExtra="@dimen/line_spacing_extra"
+                    android:text="Ocala"
+                    android:textColor="@color/darkGrey"
+                    android:textSize="@dimen/normalTextSize"
+                    app:layout_constraintEnd_toStartOf="@+id/linearRightSide"
+                    app:layout_constraintStart_toEndOf="@+id/ivPlusIconRegion"
+                    app:layout_constraintTop_toBottomOf="@+id/tvRegionTitle" />
+
+                <LinearLayout
+                    android:id="@+id/linearRightSide"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintBottom_toBottomOf="@id/tvRegionNameValue"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/tvRegionTitle">
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivMorWorkspaces"
+                        android:layout_width="@dimen/iconSize"
+                        android:layout_height="@dimen/iconSize"
+                        android:src="@drawable/chat_more_icon"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="@+id/ivPlusIconRegion"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/ivPlusIconRegion" />
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvEditWork"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:fontFamily="@font/larsseit_medium"
+                        android:text="@string/edit_text"
+                        android:textAllCaps="true"
+                        android:textColor="@color/darkBlueBtn"
+                        android:textSize="@dimen/normalTextSize" />
+
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constarintRegionsDetails"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_6sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/topConstraintsWork"
+                app:layout_constraintTop_toBottomOf="@+id/topConstraintsWork">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivempty"
+                    android:layout_width="@dimen/iconSize"
+                    android:layout_height="@dimen/iconSize"
+                    android:src="@drawable/add_user_button"
+                    android:visibility="invisible"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <LinearLayout
+                    android:id="@+id/linearFirstRow"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_6sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:weightSum="2"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/ivempty"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvManagerTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_4sdp"
+                            android:fontFamily="@font/larsseit_medium"
+                            android:letterSpacing="@dimen/text_letter_spacing"
+                            android:lineSpacingExtra="@dimen/line_spacing_extra"
+                            android:text="@string/manager_text"
+                            android:textAllCaps="true"
+                            android:textColor="@color/darkLiteGrey"
+                            android:textSize="@dimen/smallTextSize"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvManagerValue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/larsseit_medium"
+                            android:letterSpacing="@dimen/text_letter_spacing"
+                            android:lineSpacingExtra="@dimen/line_spacing_extra"
+                            android:text="Wilsojn"
+                            android:textColor="@color/darkGrey"
+                            android:textSize="@dimen/normalTextSize"
+                            app:layout_constraintStart_toStartOf="@+id/tvManagerTitle"
+                            app:layout_constraintTop_toBottomOf="@+id/tvManagerTitle" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvManager_second"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_4sdp"
+                            android:fontFamily="@font/larsseit_medium"
+                            android:letterSpacing="@dimen/text_letter_spacing"
+                            android:lineSpacingExtra="@dimen/line_spacing_extra"
+                            android:text="@string/manager_two_text"
+                            android:textAllCaps="true"
+                            android:textColor="@color/darkLiteGrey"
+                            android:textSize="@dimen/smallTextSize"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvManager_Value"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/larsseit_medium"
+                            android:letterSpacing="@dimen/text_letter_spacing"
+                            android:lineSpacingExtra="@dimen/line_spacing_extra"
+                            android:text="Wilsojn"
+                            android:textColor="@color/darkGrey"
+                            android:textSize="@dimen/normalTextSize"
+                            app:layout_constraintStart_toStartOf="@+id/tvDataBase"
+                            app:layout_constraintTop_toBottomOf="@+id/tvDataBase" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearSecondRow"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_6sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:weightSum="2"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/ivempty"
+                    app:layout_constraintTop_toBottomOf="@+id/linearFirstRow">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvDispactherTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_4sdp"
+                            android:fontFamily="@font/larsseit_medium"
+                            android:letterSpacing="@dimen/text_letter_spacing"
+                            android:lineSpacingExtra="@dimen/line_spacing_extra"
+                            android:text="@string/dispatcher_text"
+                            android:textAllCaps="true"
+                            android:textColor="@color/darkLiteGrey"
+                            android:textSize="@dimen/smallTextSize"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvDispactherValue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/larsseit_medium"
+                            android:letterSpacing="@dimen/text_letter_spacing"
+                            android:lineSpacingExtra="@dimen/line_spacing_extra"
+                            android:text="derrick.jerkins"
+                            android:textColor="@color/darkGrey"
+                            android:textSize="@dimen/normalTextSize"
+                            app:layout_constraintStart_toStartOf="@+id/tvDataBase"
+                            app:layout_constraintTop_toBottomOf="@+id/tvDataBase" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvDispatcherTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_4sdp"
+                            android:fontFamily="@font/larsseit_medium"
+                            android:letterSpacing="@dimen/text_letter_spacing"
+                            android:lineSpacingExtra="@dimen/line_spacing_extra"
+                            android:text="@string/dispatcher_first_text"
+                            android:textAllCaps="true"
+                            android:textColor="@color/darkLiteGrey"
+                            android:textSize="@dimen/smallTextSize"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvDispatcherValue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/larsseit_medium"
+                            android:letterSpacing="@dimen/text_letter_spacing"
+                            android:lineSpacingExtra="@dimen/line_spacing_extra"
+                            android:text="mark.bevans"
+                            android:textColor="@color/darkGrey"
+                            android:textSize="@dimen/normalTextSize"
+                            app:layout_constraintStart_toStartOf="@+id/tvDataBase"
+                            app:layout_constraintTop_toBottomOf="@+id/tvDataBase" />
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/linearThirdRow"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    app:layout_constraintStart_toStartOf="@id/linearFirstRow"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    app:layout_constraintTop_toBottomOf="@id/linearSecondRow"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvDispactherSecondTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_4sdp"
+                        android:fontFamily="@font/larsseit_medium"
+                        android:letterSpacing="@dimen/text_letter_spacing"
+                        android:lineSpacingExtra="@dimen/line_spacing_extra"
+                        android:text="@string/dispatcher_second_text"
+                        android:textAllCaps="true"
+                        android:textColor="@color/darkLiteGrey"
+                        android:textSize="@dimen/smallTextSize"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvDispactherSecondValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/larsseit_medium"
+                        android:letterSpacing="@dimen/text_letter_spacing"
+                        android:lineSpacingExtra="@dimen/line_spacing_extra"
+                        android:text="derrick.jerkins"
+                        android:textColor="@color/darkGrey"
+                        android:textSize="@dimen/normalTextSize"
+                        app:layout_constraintStart_toStartOf="@+id/tvDataBase"
+                        app:layout_constraintTop_toBottomOf="@+id/tvDataBase" />
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintsBusinessUnit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/_6sdp"
+            android:paddingTop="@dimen/_10sdp"
+            android:paddingEnd="@dimen/_6sdp"
+            android:paddingBottom="@dimen/_10sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/topConstraintsBusinessUnit"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivPlusIconBusiness"
+                    android:layout_width="@dimen/iconSize"
+                    android:layout_height="@dimen/iconSize"
+                    android:src="@drawable/add_user_button"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/linearRightSideBusiness"
+                    app:layout_constraintBottom_toBottomOf="@id/linearRightSideBusiness"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvBusinessTitle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_6sdp"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:fontFamily="@font/larsseit_medium"
+                    android:letterSpacing="@dimen/text_letter_spacing"
+                    android:lineSpacingExtra="@dimen/line_spacing_extra"
+                    android:text="@string/name"
+                    android:textAllCaps="true"
+                    android:textColor="@color/darkLiteGrey"
+                    android:textSize="@dimen/smallTextSize"
+                    app:layout_constraintEnd_toStartOf="@+id/linearRightSideBusiness"
+                    app:layout_constraintStart_toEndOf="@+id/ivPlusIconBusiness"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvBusinessNameValue"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_6sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:fontFamily="@font/larsseit_medium"
+                    android:letterSpacing="@dimen/text_letter_spacing"
+                    android:lineSpacingExtra="@dimen/line_spacing_extra"
+                    android:text="Ocala"
+                    android:textColor="@color/darkGrey"
+                    android:textSize="@dimen/normalTextSize"
+                    app:layout_constraintEnd_toStartOf="@+id/linearRightSideBusiness"
+                    app:layout_constraintStart_toEndOf="@+id/ivPlusIconBusiness"
+                    app:layout_constraintTop_toBottomOf="@+id/tvBusinessTitle" />
+
+                <LinearLayout
+                    android:id="@+id/linearRightSideBusiness"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintBottom_toBottomOf="@id/tvBusinessNameValue"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/tvBusinessTitle">
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivMorWorkspacesBusiness"
+                        android:layout_width="@dimen/iconSize"
+                        android:layout_height="@dimen/iconSize"
+                        android:src="@drawable/chat_more_icon"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="@+id/ivPlusIconBusiness"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/ivPlusIconBusiness" />
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvEditBusiness"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:fontFamily="@font/larsseit_medium"
+                        android:text="@string/edit_text"
+                        android:textAllCaps="true"
+                        android:textColor="@color/darkBlueBtn"
+                        android:textSize="@dimen/normalTextSize" />
+
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constarintBusinessDetails"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_6sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/topConstraintsBusinessUnit"
+                app:layout_constraintTop_toBottomOf="@+id/topConstraintsBusinessUnit">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivemptyBusiness"
+                    android:layout_width="@dimen/iconSize"
+                    android:layout_height="@dimen/iconSize"
+                    android:src="@drawable/add_user_button"
+                    android:visibility="invisible"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <LinearLayout
+                    android:id="@+id/linearFirstRowBusiness"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_6sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:weightSum="2"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/ivemptyBusiness"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvRegionalManualTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_4sdp"
+                            android:fontFamily="@font/larsseit_medium"
+                            android:letterSpacing="@dimen/text_letter_spacing"
+                            android:lineSpacingExtra="@dimen/line_spacing_extra"
+                            android:text="@string/region_manual_text"
+                            android:textAllCaps="true"
+                            android:textColor="@color/darkLiteGrey"
+                            android:textSize="@dimen/smallTextSize"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvRegionalManualValue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/larsseit_medium"
+                            android:letterSpacing="@dimen/text_letter_spacing"
+                            android:lineSpacingExtra="@dimen/line_spacing_extra"
+                            android:text="Wilsojn"
+                            android:textColor="@color/darkGrey"
+                            android:textSize="@dimen/normalTextSize"
+                            app:layout_constraintStart_toStartOf="@+id/tvManagerTitle"
+                            app:layout_constraintTop_toBottomOf="@+id/tvManagerTitle" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintsJobTypes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/_6sdp"
+            android:paddingTop="@dimen/_10sdp"
+            android:paddingEnd="@dimen/_6sdp"
+            android:paddingBottom="@dimen/_10sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/topConstraintsJobTypes"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivPlusIconJobTypes"
+                    android:layout_width="@dimen/iconSize"
+                    android:layout_height="@dimen/iconSize"
+                    android:src="@drawable/add_user_button"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/linearRightSideJobTypes"
+                    app:layout_constraintBottom_toBottomOf="@id/linearRightSideJobTypes"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvJobeTypeTitle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_6sdp"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:fontFamily="@font/larsseit_medium"
+                    android:letterSpacing="@dimen/text_letter_spacing"
+                    android:lineSpacingExtra="@dimen/line_spacing_extra"
+                    android:text="@string/name"
+                    android:textAllCaps="true"
+                    android:textColor="@color/darkLiteGrey"
+                    android:textSize="@dimen/smallTextSize"
+                    app:layout_constraintEnd_toStartOf="@+id/linearRightSideJobTypes"
+                    app:layout_constraintStart_toEndOf="@+id/ivPlusIconJobTypes"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvJobTypesNameValue"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_6sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:fontFamily="@font/larsseit_medium"
+                    android:letterSpacing="@dimen/text_letter_spacing"
+                    android:lineSpacingExtra="@dimen/line_spacing_extra"
+                    android:text="002 - Living Room"
+                    android:textColor="@color/darkGrey"
+                    android:textSize="@dimen/normalTextSize"
+                    app:layout_constraintEnd_toStartOf="@+id/linearRightSideJobTypes"
+                    app:layout_constraintStart_toEndOf="@+id/ivPlusIconJobTypes"
+                    app:layout_constraintTop_toBottomOf="@+id/tvJobeTypeTitle" />
+
+                <LinearLayout
+                    android:id="@+id/linearRightSideJobTypes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintBottom_toBottomOf="@id/tvJobTypesNameValue"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/tvJobeTypeTitle">
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivMorWorkspacesJobTypes"
+                        android:layout_width="@dimen/iconSize"
+                        android:layout_height="@dimen/iconSize"
+                        android:src="@drawable/chat_more_icon"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="@+id/ivPlusIconBusiness"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/ivPlusIconBusiness" />
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvEditJobTypes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:fontFamily="@font/larsseit_medium"
+                        android:text="@string/edit_text"
+                        android:textAllCaps="true"
+                        android:textColor="@color/darkBlueBtn"
+                        android:textSize="@dimen/normalTextSize" />
+
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constarintJobTypesDetails"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_6sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/topConstraintsJobTypes"
+                app:layout_constraintTop_toBottomOf="@+id/topConstraintsJobTypes">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivemptyJobTypes"
+                    android:layout_width="@dimen/iconSize"
+                    android:layout_height="@dimen/iconSize"
+                    android:src="@drawable/add_user_button"
+                    android:visibility="invisible"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <LinearLayout
+                    android:id="@+id/linearFirstRowJobTypes"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_6sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:weightSum="2"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/ivemptyJobTypes"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvYapiWebHookTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_4sdp"
+                            android:fontFamily="@font/larsseit_medium"
+                            android:letterSpacing="@dimen/text_letter_spacing"
+                            android:lineSpacingExtra="@dimen/line_spacing_extra"
+                            android:text="@string/yapi_webhook_text"
+                            android:textAllCaps="true"
+                            android:textColor="@color/darkLiteGrey"
+                            android:textSize="@dimen/smallTextSize"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvYapiWebHookValues"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/larsseit_medium"
+                            android:letterSpacing="@dimen/text_letter_spacing"
+                            android:lineSpacingExtra="@dimen/line_spacing_extra"
+                            android:text="Wilsojn"
+                            android:textColor="@color/darkGrey"
+                            android:textSize="@dimen/normalTextSize"
+                            app:layout_constraintStart_toStartOf="@+id/tvYapiWebHookTitle"
+                            app:layout_constraintTop_toBottomOf="@+id/tvYapiWebHookTitle" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintsUsers"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/_6sdp"
+            android:paddingTop="@dimen/_10sdp"
+            android:paddingEnd="@dimen/_6sdp"
+            android:paddingBottom="@dimen/_10sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/topConstraintsUsers"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivPlusIconUsers"
+                    android:layout_width="@dimen/iconSize"
+                    android:layout_height="@dimen/iconSize"
+                    android:src="@drawable/add_user_button"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/linearRightSideUsers"
+                    app:layout_constraintBottom_toBottomOf="@id/linearRightSideUsers"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvUsersTitle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_6sdp"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:fontFamily="@font/larsseit_medium"
+                    android:letterSpacing="@dimen/text_letter_spacing"
+                    android:lineSpacingExtra="@dimen/line_spacing_extra"
+                    android:text="@string/name"
+                    android:textAllCaps="true"
+                    android:textColor="@color/darkLiteGrey"
+                    android:textSize="@dimen/smallTextSize"
+                    app:layout_constraintEnd_toStartOf="@+id/linearRightSideUsers"
+                    app:layout_constraintStart_toEndOf="@+id/ivPlusIconUsers"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvUsersNameValue"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_6sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:fontFamily="@font/larsseit_medium"
+                    android:letterSpacing="@dimen/text_letter_spacing"
+                    android:lineSpacingExtra="@dimen/line_spacing_extra"
+                    android:text="1 - sys eng Parts"
+                    android:textColor="@color/darkGrey"
+                    android:textSize="@dimen/normalTextSize"
+                    app:layout_constraintEnd_toStartOf="@+id/linearRightSideUsers"
+                    app:layout_constraintStart_toEndOf="@+id/ivPlusIconUsers"
+                    app:layout_constraintTop_toBottomOf="@+id/tvUsersTitle" />
+
+                <LinearLayout
+                    android:id="@+id/linearRightSideUsers"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintBottom_toBottomOf="@id/tvUsersNameValue"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/tvUsersTitle">
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivMorWorkspacesUsers"
+                        android:layout_width="@dimen/iconSize"
+                        android:layout_height="@dimen/iconSize"
+                        android:src="@drawable/chat_more_icon"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="@+id/ivPlusIconBusiness"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/ivPlusIconBusiness" />
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvEditUsers"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:fontFamily="@font/larsseit_medium"
+                        android:text="@string/edit_text"
+                        android:textAllCaps="true"
+                        android:textColor="@color/darkBlueBtn"
+                        android:textSize="@dimen/normalTextSize" />
+
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constarintUsersDetails"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_6sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/topConstraintsUsers"
+                app:layout_constraintTop_toBottomOf="@+id/topConstraintsUsers">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivemptyUsers"
+                    android:layout_width="@dimen/iconSize"
+                    android:layout_height="@dimen/iconSize"
+                    android:src="@drawable/add_user_button"
+                    android:visibility="invisible"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <LinearLayout
+                    android:id="@+id/linearFirstRowUsers"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_6sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:weightSum="2"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/ivemptyUsers"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvYapiUserTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_4sdp"
+                            android:fontFamily="@font/larsseit_medium"
+                            android:letterSpacing="@dimen/text_letter_spacing"
+                            android:lineSpacingExtra="@dimen/line_spacing_extra"
+                            android:text="@string/yapi_user_text"
+                            android:textAllCaps="true"
+                            android:textColor="@color/darkLiteGrey"
+                            android:textSize="@dimen/smallTextSize"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvYapiUserValues"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/larsseit_medium"
+                            android:letterSpacing="@dimen/text_letter_spacing"
+                            android:lineSpacingExtra="@dimen/line_spacing_extra"
+                            android:text="wendy.herrera"
+                            android:textColor="@color/darkGrey"
+                            android:textSize="@dimen/normalTextSize"
+                            app:layout_constraintStart_toStartOf="@+id/tvYapiUserTitle"
+                            app:layout_constraintTop_toBottomOf="@+id/tvYapiUserTitle" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <View
+            android:id="@+id/viewBottomLine"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:background="@color/chat_bottom_line_color"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintsUsers" />
+    </LinearLayout>
+</layout>

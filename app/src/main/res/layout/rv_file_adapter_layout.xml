@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="model"
+            type="com.yapi.views.chat.chatUserInfo.ChatUserInfoViewModel" />
+    </data>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/_10sdp">
+    <RelativeLayout
+        android:id="@+id/relFiles"
+        android:layout_width="@dimen/user_info_box"
+        android:layout_height="@dimen/user_info_box"
+        android:background="@drawable/et_drawable"
+        android:backgroundTint="@color/information_profile_back_box"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="@dimen/iconSize"
+            android:layout_height="@dimen/iconSize"
+            android:layout_centerInParent="true"
+            android:src="@drawable/file" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="0dp"
+        app:layout_constraintStart_toEndOf="@id/relFiles"
+        app:layout_constraintTop_toTopOf="@id/relFiles"
+        app:layout_constraintBottom_toBottomOf="@+id/relFiles"
+        android:layout_height="wrap_content">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvFileName"
+        android:textColor="@color/darkGrey"
+        android:text="Requirement.pdf"
+        android:textSize="@dimen/normalTextSize"
+        android:letterSpacing="@dimen/text_letter_spacing"
+        android:lineSpacingExtra="@dimen/line_spacing_extra"
+        android:fontFamily="@font/larsseit_medium"
+        android:layout_width="wrap_content"
+        android:layout_marginStart="@dimen/_6sdp"
+        android:layout_height="wrap_content"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvFileDetail"
+            android:textColor="@color/medium_grey_color"
+            android:text="Jan 01, 2023    40Kb"
+            android:textSize="@dimen/smallTextSize"
+            android:letterSpacing="@dimen/text_letter_spacing"
+            android:lineSpacingExtra="@dimen/line_spacing_extra"
+            android:layout_marginStart="@dimen/_6sdp"
+            android:fontFamily="@font/larsseit_regular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="@dimen/iconSize"
+        android:layout_height="@dimen/iconSize"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:src="@drawable/chat_more_icon" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

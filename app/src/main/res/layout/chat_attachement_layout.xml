@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/attachment_back"
+            android:paddingStart="@dimen/startMainMargin"
+            android:paddingTop="@dimen/_10sdp"
+            android:paddingEnd="@dimen/startMainMargin"
+            android:paddingBottom="@dimen/_10sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivTopImage"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_4sdp"
+                android:src="@drawable/chat_attachment_line"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:id="@+id/linearSearch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:background="@drawable/et_drawable"
+                android:orientation="horizontal"
+                android:padding="@dimen/_5sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ivTopImage">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/iconSize"
+                    android:layout_height="@dimen/iconSize"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:src="@drawable/search" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/etSearchAttachment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="@dimen/_2sdp"
+                    android:background="@color/transparent"
+                    android:fontFamily="@font/larsseit_regular"
+                    android:hint="@string/search_for_files"
+                    android:padding="@dimen/_10sdp"
+                    android:singleLine="true"
+                    android:textColor="@color/darkGrey"
+                    android:textColorHint="@color/darkLiteGrey"
+                    android:textSize="@dimen/normalTextSize" />
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvAttachmentTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:fontFamily="@font/larsseit_medium"
+                android:letterSpacing="@dimen/text_letter_spacing"
+                android:lineSpacingExtra="@dimen/line_spacing_extra"
+
+                android:text="@string/attachments_text"
+                android:textColor="@color/medium_grey_color"
+                android:textSize="@dimen/normalTextSize"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/linearSearch" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvUploadGoogleDrive"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:drawableStart="@drawable/google_drive_icon"
+                android:drawablePadding="@dimen/_8sdp"
+                android:fontFamily="@font/larsseit_medium"
+                android:letterSpacing="@dimen/text_letter_spacing"
+                android:lineSpacingExtra="@dimen/line_spacing_extra"
+                android:text="@string/upload_from_google_drive"
+                android:textColor="@color/darkGrey"
+                android:textSize="@dimen/normalTextSize"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvAttachmentTitle" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvRecentFiles"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:drawableStart="@drawable/add_recent_files"
+                android:drawablePadding="@dimen/_8sdp"
+                android:fontFamily="@font/larsseit_medium"
+                android:letterSpacing="@dimen/text_letter_spacing"
+                android:lineSpacingExtra="@dimen/line_spacing_extra"
+                android:text="@string/recent_files"
+                android:textColor="@color/darkGrey"
+                android:textSize="@dimen/normalTextSize"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvUploadGoogleDrive" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvUploadFromComputer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:drawableStart="@drawable/upload_from_computer"
+                android:drawablePadding="@dimen/_8sdp"
+                android:fontFamily="@font/larsseit_medium"
+                android:letterSpacing="@dimen/text_letter_spacing"
+                android:lineSpacingExtra="@dimen/line_spacing_extra"
+                android:text="@string/Upload_from_your_computer"
+                android:textColor="@color/darkGrey"
+                android:textSize="@dimen/normalTextSize"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvRecentFiles" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

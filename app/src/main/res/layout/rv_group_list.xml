@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <View
+        android:id="@+id/SelectedLineRvGroupList"
+        android:layout_width="@dimen/_2sdp"
+        android:layout_height="0dp"
+        android:background="@color/blueColor"
+        android:visibility="invisible"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintsTop"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/_10sdp"
+        android:paddingBottom="@dimen/_10sdp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/SelectedLineRvGroupList"
+        app:layout_constraintEnd_toEndOf="parent">
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imgGroupIconRvGroupList"
+        android:layout_width="@dimen/iconSize"
+        android:layout_height="@dimen/iconSize"
+        android:src="@drawable/group_icon"
+        android:layout_marginStart="@dimen/_23sdp"
+        android:layout_gravity="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtGroupNameRvGroupList"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Sales"
+        android:gravity="start"
+        android:layout_weight="1"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:layout_marginStart="@dimen/startPaddingNormal"
+        android:layout_gravity="center"
+        android:textColor="@color/medium_grey_color"
+        android:fontFamily="@font/larsseit_medium"
+        android:textSize="@dimen/normalTextSize"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imgGroupIconRvGroupList"
+        app:layout_constraintEnd_toStartOf="@+id/txtCountRvGroupList"
+        />
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtCountRvGroupList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/round_circle_blue"
+        android:clipToOutline="true"
+        android:fontFamily="@font/larsseit_bold"
+        android:gravity="center"
+        android:text="84"
+        android:textColor="@color/white"
+        android:textSize="@dimen/unSeenCountTextSize"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:visibility="gone"
+        android:id="@+id/layoutAddData"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:clipToOutline="true"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/_10ssp"
+        android:paddingBottom="@dimen/_10ssp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/SelectedLineRvGroupList"
+       app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/imgAddIconNewGroupsMenu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/_26sdp"
+            android:fontFamily="@font/larsseit_bold"
+            android:text="@string/createGroups_text"
+            android:textColor="@color/blueColor"
+            android:textSize="@dimen/smallTextSize"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/txtAddIconNewGroupsMenu"
+            android:layout_width="@dimen/iconSize"
+            android:layout_height="@dimen/iconSize"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/topFiveMargin"
+            android:src="@drawable/ic_baseline_add_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imgAddIconNewGroupsMenu"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

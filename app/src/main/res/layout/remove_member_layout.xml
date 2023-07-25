@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:id="@+id/linearRemoveMember"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/ivOutsideCloseGroup"
+        android:layout_width="@dimen/outside_cross_width"
+        android:layout_height="@dimen/outside_cross_height"
+        android:layout_gravity="end"
+        android:layout_marginTop="@dimen/_2sdp"
+        android:visibility="gone"
+        android:src="@drawable/ic_cross_icon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/white" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardviewAddTemplate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginEnd="@dimen/_5sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:elevation="@dimen/_5sdp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="@dimen/cardview_popup_back_radius"
+        app:cardElevation="@dimen/_5sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/startMainMargin"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/ivInnerBack"
+        android:layout_width="@dimen/iconSize"
+        android:layout_height="@dimen/iconSize"
+        android:layout_gravity="end"
+        android:padding="@dimen/_2sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:src="@drawable/ic_cross_icon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+<androidx.appcompat.widget.AppCompatTextView
+    android:id="@+id/tvTitle"
+    android:text="Are you sure you want to delete this user?"
+    android:textSize="@dimen/_16ssp"
+    android:textColor="@color/darkGrey"
+    android:layout_width="0dp"
+    android:letterSpacing="@dimen/text_letter_spacing"
+    android:layout_marginEnd="@dimen/startMainMargin"
+    android:layout_marginStart="@dimen/startMainMargin"
+    android:lineSpacingExtra="@dimen/line_spacing_extra"
+    android:layout_marginTop="@dimen/_6sdp"
+    android:gravity="center_horizontal"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/ivInnerBack"
+    android:fontFamily="@font/larsseit_bold"
+    android:layout_height="wrap_content"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvDescription"
+        android:text="Do you really want to delete this user? This process cannot be undone."
+        android:textSize="@dimen/_10ssp"
+        android:textColor="@color/medium_grey_color"
+        android:layout_width="0dp"
+        android:letterSpacing="@dimen/text_letter_spacing"
+        android:layout_marginTop="@dimen/_6sdp"
+        android:lineSpacingExtra="@dimen/line_spacing_extra"
+        android:gravity="center_horizontal"
+        android:layout_marginEnd="@dimen/startMainMargin"
+        android:layout_marginStart="@dimen/startMainMargin"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:fontFamily="@font/larsseit_regular"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_marginTop="@dimen/_15sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="@dimen/popSideMargin"
+        android:layout_marginStart="@dimen/popSideMargin"
+        app:layout_constraintTop_toBottomOf="@+id/tvDescription"
+        android:layout_height="wrap_content">
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnCancelTemplate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:layout_weight="0.85"
+            android:background="@drawable/rounded_background"
+            android:backgroundTint="@color/liteGrey"
+            android:fontFamily="@font/larsseit_bold"
+            android:letterSpacing="@dimen/text_letter_spacing"
+            android:lineSpacingExtra="@dimen/line_spacing_extra"
+            android:paddingTop="@dimen/etVerticalPadding"
+            android:paddingEnd="@dimen/_3sdp"
+            android:paddingStart="@dimen/_3sdp"
+            android:paddingBottom="@dimen/etVerticalPadding"
+            android:stateListAnimator="@null"
+            android:text="@string/cancel_txt"
+            android:textAllCaps="true"
+            android:textColor="@color/black"
+            android:textSize="@dimen/normalSmallTextSize"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btnDelGroup"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnTemplateSave"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_weight="0.85"
+            android:background="@drawable/rounded_background"
+            android:backgroundTint="@color/darkRed"
+            android:fontFamily="@font/larsseit_bold"
+            android:letterSpacing="@dimen/text_letter_spacing"
+            android:lineSpacingExtra="@dimen/line_spacing_extra"
+            android:paddingTop="@dimen/etVerticalPadding"
+            android:paddingBottom="@dimen/etVerticalPadding"
+            android:stateListAnimator="@null"
+            android:paddingEnd="@dimen/_3sdp"
+            android:paddingStart="@dimen/_3sdp"
+            android:text="@string/delete_user_text"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/normalSmallTextSize"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/btnCancelInvite" />
+
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView></LinearLayout>

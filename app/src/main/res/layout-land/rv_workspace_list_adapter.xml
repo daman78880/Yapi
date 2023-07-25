@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/constarintsTopList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_3sdp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintsUsers"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/_10sdp"
+
+            android:paddingBottom="@dimen/_10sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/topConstraintsWork"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    android:weightSum="7">
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_weight="1">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvFullNameTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:fontFamily="@font/larsseit_medium"
+            android:letterSpacing="@dimen/text_letter_spacing"
+            android:lineSpacingExtra="@dimen/line_spacing_extra"
+            android:text="@string/name"
+            android:textColor="@color/darkLiteGrey"
+            android:textSize="@dimen/smallTextSize"
+            app:layout_constraintEnd_toStartOf="@+id/linearRightSide"
+            app:layout_constraintStart_toEndOf="@+id/ivPlusIconWork"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvNameValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:fontFamily="@font/larsseit_medium"
+            android:letterSpacing="@dimen/text_letter_spacing"
+            android:lineSpacingExtra="@dimen/line_spacing_extra"
+            android:text="Airpos USA"
+            android:textColor="@color/darkGrey"
+            android:textSize="@dimen/normalTextSize"
+            app:layout_constraintEnd_toStartOf="@+id/linearRightSide"
+            app:layout_constraintStart_toEndOf="@+id/ivPlusIconWork"
+            app:layout_constraintTop_toBottomOf="@+id/tvFullNameTitle" />
+
+
+    </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvDataBase"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_4sdp"
+                        android:fontFamily="@font/larsseit_medium"
+                        android:letterSpacing="@dimen/text_letter_spacing"
+                        android:lineSpacingExtra="@dimen/line_spacing_extra"
+                        android:text="@string/database_title"
+                        android:textAllCaps="true"
+                        android:textColor="@color/darkLiteGrey"
+                        android:textSize="@dimen/smallTextSize"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvDatabaseValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/larsseit_medium"
+                        android:letterSpacing="@dimen/text_letter_spacing"
+                        android:lineSpacingExtra="@dimen/line_spacing_extra"
+                        android:text="Wilsojn"
+                        android:textColor="@color/darkGrey"
+                        android:textSize="@dimen/normalTextSize"
+                        app:layout_constraintStart_toStartOf="@+id/tvDataBase"
+                        app:layout_constraintTop_toBottomOf="@+id/tvDataBase" />
+
+
+                </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvToken"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:fontFamily="@font/larsseit_medium"
+            android:letterSpacing="@dimen/text_letter_spacing"
+            android:lineSpacingExtra="@dimen/line_spacing_extra"
+            android:text="@string/token_title"
+            android:textAllCaps="true"
+            android:textColor="@color/darkLiteGrey"
+            android:textSize="@dimen/smallTextSize"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvTokenValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/larsseit_medium"
+            android:letterSpacing="@dimen/text_letter_spacing"
+            android:lineSpacingExtra="@dimen/line_spacing_extra"
+            android:text="Wilsojn"
+            android:textColor="@color/darkGrey"
+            android:textSize="@dimen/normalTextSize"
+            app:layout_constraintStart_toStartOf="@+id/tvDataBase"
+            app:layout_constraintTop_toBottomOf="@+id/tvDataBase" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvSecretTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:fontFamily="@font/larsseit_medium"
+            android:letterSpacing="@dimen/text_letter_spacing"
+            android:lineSpacingExtra="@dimen/line_spacing_extra"
+            android:text="@string/secret_title"
+            android:textAllCaps="true"
+            android:textColor="@color/darkLiteGrey"
+            android:textSize="@dimen/smallTextSize"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvSecretValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/larsseit_medium"
+            android:letterSpacing="@dimen/text_letter_spacing"
+            android:lineSpacingExtra="@dimen/line_spacing_extra"
+            android:text="**************89"
+            android:textColor="@color/darkGrey"
+            android:textSize="@dimen/normalTextSize"
+            app:layout_constraintStart_toStartOf="@+id/tvDataBase"
+            app:layout_constraintTop_toBottomOf="@+id/tvDataBase" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvActiveTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:fontFamily="@font/larsseit_medium"
+            android:letterSpacing="@dimen/text_letter_spacing"
+            android:lineSpacingExtra="@dimen/line_spacing_extra"
+            android:text="@string/active_title"
+            android:textAllCaps="true"
+            android:textColor="@color/darkLiteGrey"
+            android:textSize="@dimen/smallTextSize"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvActiveValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/larsseit_medium"
+            android:letterSpacing="@dimen/text_letter_spacing"
+            android:lineSpacingExtra="@dimen/line_spacing_extra"
+            android:text="Yes"
+            android:textColor="@color/darkGrey"
+            android:textSize="@dimen/normalTextSize"
+            app:layout_constraintStart_toStartOf="@+id/tvDataBase"
+            app:layout_constraintTop_toBottomOf="@+id/tvDataBase" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearEdit"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:gravity="center_horizontal"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="@id/tvNameValue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tvFullNameTitle">
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivMorWorkspaces"
+            android:layout_width="@dimen/iconSize"
+            android:layout_height="@dimen/iconSize"
+            android:src="@drawable/chat_more_icon"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/ivPlusIconWork"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/ivPlusIconWork" />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvEditWork"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:fontFamily="@font/larsseit_medium"
+            android:text="@string/edit_text"
+            android:textAllCaps="true"
+            android:textColor="@color/darkBlueBtn"
+            android:textSize="@dimen/normalTextSize" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/linearOpen"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:gravity="center_horizontal"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="@id/tvNameValue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tvFullNameTitle">
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvOpenWork"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/larsseit_medium"
+            android:text="@string/open_text"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:textAllCaps="true"
+            android:textColor="@color/darkBlueBtn"
+            android:textSize="@dimen/normalTextSize" />
+    </LinearLayout>
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivPlusIconWork"
+                    android:layout_width="@dimen/iconSize"
+                    android:layout_height="@dimen/iconSize"
+                    android:visibility="gone"
+                    android:src="@drawable/add_user_button"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/linearRightSide"
+                    app:layout_constraintBottom_toBottomOf="@id/linearRightSide"/>
+
+
+
+</LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constarintDetails"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_6sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/topConstraintsWork"
+                app:layout_constraintTop_toBottomOf="@+id/topConstraintsWork">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivempty"
+                    android:layout_width="@dimen/iconSize"
+                    android:layout_height="@dimen/iconSize"
+                    android:src="@drawable/add_user_button"
+                    android:visibility="invisible"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <LinearLayout
+                    android:id="@+id/linearFirstRow"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_6sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:weightSum="2"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/ivempty"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                 <!--   <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvDataBase"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_4sdp"
+                            android:fontFamily="@font/larsseit_medium"
+                            android:letterSpacing="@dimen/text_letter_spacing"
+                            android:lineSpacingExtra="@dimen/line_spacing_extra"
+                            android:text="@string/database_title"
+                            android:textAllCaps="true"
+                            android:textColor="@color/darkLiteGrey"
+                            android:textSize="@dimen/smallTextSize"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvDatabaseValue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/larsseit_medium"
+                            android:letterSpacing="@dimen/text_letter_spacing"
+                            android:lineSpacingExtra="@dimen/line_spacing_extra"
+                            android:text="Wilsojn"
+                            android:textColor="@color/darkGrey"
+                            android:textSize="@dimen/normalTextSize"
+                            app:layout_constraintStart_toStartOf="@+id/tvDataBase"
+                            app:layout_constraintTop_toBottomOf="@+id/tvDataBase" />
+                    </LinearLayout>-->
+
+                 <!--   <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvToken"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_4sdp"
+                            android:fontFamily="@font/larsseit_medium"
+                            android:letterSpacing="@dimen/text_letter_spacing"
+                            android:lineSpacingExtra="@dimen/line_spacing_extra"
+                            android:text="@string/token_title"
+                            android:textAllCaps="true"
+                            android:textColor="@color/darkLiteGrey"
+                            android:textSize="@dimen/smallTextSize"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvTokenValue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/larsseit_medium"
+                            android:letterSpacing="@dimen/text_letter_spacing"
+                            android:lineSpacingExtra="@dimen/line_spacing_extra"
+                            android:text="Wilsojn"
+                            android:textColor="@color/darkGrey"
+                            android:textSize="@dimen/normalTextSize"
+                            app:layout_constraintStart_toStartOf="@+id/tvDataBase"
+                            app:layout_constraintTop_toBottomOf="@+id/tvDataBase" />
+                    </LinearLayout>-->
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearSecondRow"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_6sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:weightSum="2"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/ivempty"
+
+                    app:layout_constraintTop_toBottomOf="@+id/linearFirstRow">
+
+
+                </LinearLayout>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:id="@+id/viewBottomLine"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_1sdp"
+            android:background="@color/chat_bottom_line_color"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintsUsers" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
